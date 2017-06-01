@@ -1,0 +1,70 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Register</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-grid>
+
+        <!--Row 1 -->
+        <ion-row>
+            <ion-col>
+                <input type="text" placeholder="username" ng-model="data.username" class="inputText">
+            </ion-col>
+        </ion-row>
+
+        <!--Row 2 -->
+        <ion-row>
+            <ion-col>
+                <input type="text" placeholder="E-mail" ng-model="data.email" class="inputText">
+            </ion-col>
+        </ion-row>
+
+        <!--Row 3 -->
+        <ion-row>
+            <ion-col>
+                <input type="number" placeholder="Mobile Number" class="inputText">
+            </ion-col>
+        </ion-row>
+
+        <!--Row 4 -->
+        <ion-row>
+            <ion-col>
+                <input type="text" placeholder="Address" class="inputText">
+            </ion-col>
+        </ion-row>
+
+        <!-- Row 5 -->
+        <ion-row>
+            <ion-col>
+                <input type="password" placeholder="password" ng-model="data.password" class="inputText">
+            </ion-col>
+        </ion-row>
+
+        <!-- Row 6-->
+        <ion-row>
+            <ion-col>
+                <input type="password" placeholder="confirm password" ng-model="data.password" class="inputText">
+            </ion-col>
+        </ion-row>
+
+        <!-- Row 7-->
+        <ion-row>
+            <ion-col>
+                <button (click)="loginToHome()" ion-button full icon-left><ion-icon name="login"></ion-icon>Login</button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+</ion-content>

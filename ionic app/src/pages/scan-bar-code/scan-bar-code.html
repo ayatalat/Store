@@ -1,0 +1,50 @@
+<!--
+  Generated template for the ScanBarCodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>ScanBarCode</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+                <button (click)="scanBarCode()" ion-button>Scan Bar Code</button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <div *ngIf="result">
+                    {{result.text}}
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <div *ngIf="result">
+                    {{result.format}}
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <div *ngIf="result">
+                    {{result.cancelled}}
+                </div>
+            </ion-col>
+        </ion-row>
+
+
+    </ion-grid>
+</ion-content>

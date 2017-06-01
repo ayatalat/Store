@@ -1,0 +1,23 @@
+<section id="main-content">
+    <section class="wrapper">
+
+        <div class="row">
+            <table class="table table-bordered">
+                <tr>
+                    <td>name</td>
+                    <td>descritions</td>
+                    <td>action</td>
+                </tr>
+                <tr *ngFor="let catagory of ListCategory()">
+                    <td>{{catagory.name}}</td>
+                    <td>{{catagory.description}}</td>
+                    <td>
+                        <a [routerLink]="['/catagory/edit',catagory.id]" class="btn btn-primary">Edit</a>
+                        <a [routerLink]="['/catagory/delete',catagory.id]" class="btn btn-danger" >delete</a>
+                        <a *ngIf="catagory.id_subcat != null" [routerLink]="['/subcatagory/add',catagory.id]" class="btn btn-primary"> add subCatagory</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</section>

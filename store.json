@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "product1",
+      "barcode": "1234567891234",
+      "price": 200,
+      "Quantity": 100,
+      "descripation": "frist product",
+      "image": "image",
+      "cat_id": 1,
+      "status": 1
+    },
+    {
+      "id": 2,
+      "name": "product2",
+      "barcode": "1234567891234",
+      "price": 300,
+      "Quantity": 400,
+      "descripation": "second product",
+      "image": "image2",
+      "cat_id": 2,
+      "status": 1
+    }
+  ],
+  "category": [
+    {
+      "name": "electronics",
+      "id_subcat": null,
+      "description": "new descrption",
+      "status": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "mobiles",
+      "id_subcat": 1,
+      "status": 1,
+      "description": "descripation"
+    },
+    {
+      "id": 3,
+      "name": "meats",
+      "id_subcat": null,
+      "status": 1,
+      "description": "descripation"
+    },
+    {
+      "id": 4,
+      "name": "chickens",
+      "id_subcat": 3,
+      "status": 1,
+      "description": "descripation"
+    },
+     {
+      "name": "newsub",
+      "id_supcat": 2,
+      "status": 1,
+      "description": "newsub",
+      "id": 8
+    },
+    {
+      "name": "newsub2",
+      "id_supcat":null,
+      "status": 1,
+      "description": "newsub",
+      "id": 9
+    },
+    {
+      "name": "newsubcatag",
+      "id_supcat": null,
+      "status": 1,
+      "description": "newsub",
+      "id": 10
+    },
+    {
+      "name": "newsub",
+      "id_supcat": 2,
+      "status": 1,
+      "description": "sniew",
+      "id": 11
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "datea_dded": "2011-07-14 19:43:37 +0100",
+      "iduser": 1,
+      "status": 1,
+      "datedelivered": "2017-05-15 19:43:37 +0100"
+    },
+    {
+      "id": 2,
+      "date_added": "2017-05-13 19:43:37 +0100",
+      "iduser": 2,
+      "status": 1,
+      "date_delivered": "2017-05-12 19:43:37 +0100"
+    }
+  ]
+}
