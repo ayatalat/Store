@@ -14,9 +14,9 @@ import { SubCatService } from "app/services/subcatagory.service";
 import { ProductService } from 'app/services/product.service';
 import { SubCatagory } from "app/category/subcatagory.component";
 import { deleteComponent } from "app/category/deletecatagory.component";
-import { Product } from './product/product.component';
-import { AddProduct } from './product/addproduct.component';
-import { editProduct } from './product/editproduct.component';
+import { Product } from 'app/product/product.component';
+import { AddProduct } from 'app/product/addproduct.component';
+import { editProduct } from 'app/product/editproduct.component';
 
 @NgModule({
   declarations: [

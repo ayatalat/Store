@@ -1,29 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'app/services/product.service';
-import {Router} from '@angular/router';
+import { CatService } from '../services/catagory.service';
+
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-addproduct',
   templateUrl: '../product/addproduct.component.html',
-  styleUrls:['../product/addproduct.component.css']
+  styleUrls: ['../product/addproduct.component.css']
 })
 export class AddProduct {
-    productName = "";
-    producBarcode = "";
-    productPrice = "";
-    productQuantity = "";
-    productImage = "";
-    productDescription = "";
-    constructor(private productService: ProductService, private router:Router) { 
+  productName = "";
+  productBarcode = "";
+  productPrice = "";
+  productQuantity = "";
+  productImage = "";
+  productDescription = "";
+  selectedoption = "";
+  Category:any;
+  constructor(private catservice: CatService, private productService: ProductService, private router: Router) {
 
   }
-  addProduct()
-    {
-        if (this.productName != "" )
-       {
-         console.log("in component");
-         console.log(this.productName);
-        this.productService.addProduct(this.productName,this.producBarcode,this.productPrice,this.productQuantity,this.productImage,this.productDescription);
-        this.router.navigate(['products/list']); 
-     }
+  onChange(newValue) {
+    console.log(newValue);
+    this.selectedoption = newValue;
+    console.log(newValue);
+  }
+  addProduct() {
+    if (this.productName != "") {
+      console.log("in component");
+      console.log(this.productName);
+      this.Category = this.catservice.catagories.filter((catagory: any) => catagory.name == this.selectedoption);
+
+      this.productService.addProduct(this.productName, this.productBarcode, this.productPrice, this.productQuantity, this.productDescription,this.Category.id);
+      this.router.navigate(['products/list']);
+    }
+  }
+  ListCategory() {
+    return this.catservice.categories;
   }
 }

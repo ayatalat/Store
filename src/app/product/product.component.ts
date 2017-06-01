@@ -6,10 +6,8 @@ import { ProductService } from 'app/services/product.service'
   styleUrls:['../product/product.component.css']
 })
 export class Product {
-   
     constructor(private productService: ProductService) { 
       this.getProducts();
-
   }
   getProducts()
   {
@@ -20,5 +18,4 @@ export class Product {
     console.log(removeid);
     return this.productService.removeProduct(removeid);
   }
-
 }
