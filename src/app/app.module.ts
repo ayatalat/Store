@@ -17,6 +17,8 @@ import { deleteComponent } from "app/category/deletecatagory.component";
 import { Product } from 'app/product/product.component';
 import { AddProduct } from 'app/product/addproduct.component';
 import { editProduct } from 'app/product/editproduct.component';
+import { OrderComponent } from "app/order/order.component";
+import { OrderService } from "app/services/order.service";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { editProduct } from 'app/product/editproduct.component';
     EditCatagory,
      SubCatagory,
      deleteComponent,
+      OrderComponent ,
      Product,
     AddProduct,
     editProduct
@@ -41,10 +44,11 @@ import { editProduct } from 'app/product/editproduct.component';
       {path:"subcatagory/add/:id",component:SubCatagory},
       {path:"products/list" ,component:Product},
       {path:"products/add" ,component:AddProduct},
-      {path:"products/edit/:id" ,component:editProduct}
+      {path:"products/edit/:id" ,component:editProduct},
+      {path: "order/list", component:OrderComponent}
     ])
   ],
-  providers: [CatService,SubCatService,ProductService],
+  providers: [CatService,SubCatService,ProductService,OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

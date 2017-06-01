@@ -1,0 +1,17 @@
+<section id="main-content">
+    <section class="wrapper">
+
+        <div class="row">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Date Added</td>
+                    <td>Date Delivered</td>
+                </tr>
+                <tr *ngFor="let order of listOrders()">
+                    <td>{{order.date_added}}</td>
+                    <td>{{order.date_delivered}}</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</section>
