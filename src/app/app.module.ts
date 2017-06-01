@@ -11,8 +11,12 @@ import { CatComponent } from "app/category/category.component";
 import { AddCatagory } from "app/category/addcatagory.component";
 import { EditCatagory } from "app/category/editcatagory.component";
 import { SubCatService } from "app/services/subcatagory.service";
+import { ProductService } from 'app/services/product.service';
 import { SubCatagory } from "app/category/subcatagory.component";
 import { deleteComponent } from "app/category/deletecatagory.component";
+import { Product } from './product/product.component';
+import { AddProduct } from './product/addproduct.component';
+import { editProduct } from './product/editproduct.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { deleteComponent } from "app/category/deletecatagory.component";
     AddCatagory,
     EditCatagory,
      SubCatagory,
-     deleteComponent
+     deleteComponent,
+     Product,
+    AddProduct,
+    editProduct
   ],
   imports: [
     BrowserModule,
@@ -31,11 +38,13 @@ import { deleteComponent } from "app/category/deletecatagory.component";
       {path:"catagory/add",component:AddCatagory},
       {path:"catagory/edit/:id",component:EditCatagory},
       {path:"catagory/delete/:id",component:deleteComponent},
-      {path:"subcatagory/add/:id",component:SubCatagory}
-      
+      {path:"subcatagory/add/:id",component:SubCatagory},
+      {path:"products/list" ,component:Product},
+      {path:"products/add" ,component:AddProduct},
+      {path:"products/edit/:id" ,component:editProduct}
     ])
   ],
-  providers: [CatService,SubCatService],
+  providers: [CatService,SubCatService,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,33 @@
+<section id="main-content">
+    <section class="wrapper">
+
+        <div class="row">
+            <!--<a href="products/add">add product</a>-->
+            <table class="table table-bordered">
+                <tr>
+                    <td> id </td>
+                    <td> name </td>
+                    <td> barcode </td>
+                    <td> price </td>
+                    <td>Quantity </td>
+                    <td> image </td>
+                    <td> descripation </td>
+                    <td> action </td>
+                </tr>
+                <tr *ngFor="let product of getProducts()">
+                    <td >{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.barcode}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>{{product.image}}</td>
+                    <td>{{product.descripation}}</td>
+                    <td>
+                        <button type="button" (click)="removeProduct(product.id)" class="btn btn-primary">remove</button> 
+                        <a [routerLink]="['/products/edit',product.id]" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</section>

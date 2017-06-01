@@ -1,0 +1,29 @@
+<div class="row" *ngFor="let product of getProductById()" >
+  <div class="form-group col-md-5 col-md-offset-4" >
+    <label for="exampleInputEmail1">product name</label>
+    <input type="text" name="productnameEdit" class="form-control" [(ngModel)]="product.name" #productnameEdit="ngModel"/>
+  </div>
+  <div class="form-group col-md-5 col-md-offset-4" >
+    <label for="exampleInputEmail1">product barcode</label>
+    <input type="text" name="productbarcode" class="form-control" [(ngModel)]="product.barcode" #productbarcode="ngModel"/>
+  </div>
+  <div class="form-group col-md-5 col-md-offset-4" >
+    <label for="exampleInputEmail1">product price</label>
+    <input type="text" name="productprice" class="form-control" [(ngModel)]="product.price" #productprice="ngModel"/>
+  </div>
+    <div class="form-group col-md-5 col-md-offset-4" >
+    <label for="exampleInputEmail1">product Quantity</label>
+    <input type="text" name="productquantity" class="form-control" [(ngModel)]="product.quantity" #productquantity="ngModel"/>
+  </div>
+  <div class="form-group col-md-5 col-md-offset-4" >
+    <label for="exampleInputFile"> product Image</label>
+    <input type="file" name ="productimage" class="form-control-file" id="exampleInputFile"  [(ngModel)]="product.image" #productimage="ngModel">
+  </div>
+  <div class="form-group col-md-5 col-md-offset-4" >
+    <label for="exampleTextarea">product Description</label>
+    <textarea name="productdescription" class="form-control" id="exampleTextarea" rows="3" [(ngModel)]="product.description" #productdescription="ngModel"></textarea>
+  </div>
+<div class="form-group col-md-5 col-md-offset-4">
+    <button type="button" class="btn btn-primary" (click)="editProduct(product.id,product.status)">edit product</button>
+</div>
+</div>
