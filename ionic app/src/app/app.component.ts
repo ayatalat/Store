@@ -11,6 +11,7 @@ import { CategoriesPage } from '../pages/categories/categories';
 import { CartPage } from '../pages/cart/cart';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })

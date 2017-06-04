@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ProductPage } from '../product/product';
 
-// import { Http } from '@angular/http';
-// import { ProductService } from '../../Services/product.service';
+import { Http } from '@angular/http';
+import { ProductService } from '../../Services/product.service';
 
 @Component({
   selector: 'page-products-list',
@@ -11,7 +11,7 @@ import { ProductPage } from '../product/product';
 })
 export class ProductsListPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public productService:ProductService) {
   }
 
   ionViewDidLoad() {
@@ -20,6 +20,10 @@ export class ProductsListPage {
 
   showProduct() {
     this.navCtrl.push(ProductPage);
+  }
+  ListProduct() {
+        return this.productService.products;
+        // console.log("component");
   }
 
 }
