@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { BarcodeScanner,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
+import { ProductPage } from "../product/product";
 
 @Component({
   selector: 'page-scan-bar-code',
@@ -22,6 +23,8 @@ export class ScanBarCodePage {
 
     this.result = await this.barCode.scan(this.options);
     console.log(this.result);
+
+    this.navCtrl.push(ProductPage);
   }
 
   ionViewDidLoad() {

@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
 import { CategoriesPage } from '../categories/categories';
 import { ScanBarCodePage } from '../scan-bar-code/scan-bar-code';
+import { CartPage } from "../cart/cart";
+
 
 @Component({
   selector: 'page-home',
@@ -24,6 +26,10 @@ export class HomePage {
 
   scanBarCode() {
     this.navCtrl.push(ScanBarCodePage);
+  }
+
+  showCart() {
+    this.navCtrl.push(CartPage);
   }
 
 }

@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-    <ion-grid>
+    <!--<ion-grid>
         <ion-row>
             <ion-col text-center>
                 <button (click)="scanBarCode()" ion-button full icon-left>Shop Now</button>
@@ -24,7 +24,7 @@
 
         <ion-row>
             <ion-col text-center>
-                <button ion-button full icon-left>Cart</button>
+                <button (click)="showCart()" ion-button full icon-left>Cart</button>
             </ion-col>
         </ion-row>
 
@@ -33,6 +33,25 @@
                 <button (click)="showProfile()" ion-button full icon-left>Profile</button>
             </ion-col>
         </ion-row>
-    </ion-grid>
+    </ion-grid>-->
+
+    <div id="topContainer">
+        <button (click)="scanBarCode()" ion-button full id="scanBtn">Scan Bar Code</button>
+    </div>
+
+    <div id="bottomContainer">
+        <div id="topLeft">
+            <button (click)="scanBarCode()" ion-button full icon-left>Shop Now</button>
+        </div>
+        <div id="topRight">
+            <button (click)="showCategories()" ion-button full icon-left>Show Products</button>
+        </div>
+        <div id="bottomLeft">
+            <button (click)="showCart()" ion-button full icon-left>Cart</button>
+        </div>
+        <div id="bottomRight">
+            <button (click)="showProfile()" ion-button full icon-left>Profile</button>
+        </div>
+    </div>
 
 </ion-content>

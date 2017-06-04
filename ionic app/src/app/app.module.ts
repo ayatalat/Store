@@ -6,6 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyApp } from './app.component';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
+import { HttpModule } from '@angular/http';
+import { CatService } from "../Services/catagory.service";
+import { OrderService } from "../Services/order.service";
+// import { ProductService } from "../Services/product.service";
+import { SubCatService } from "../Services/subcatagory.service";
+
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
@@ -16,6 +22,10 @@ import { ProductPage } from '../pages/product/product';
 import { EditDataPage } from '../pages/edit-data/edit-data';
 import { ScanBarCodePage } from '../pages/scan-bar-code/scan-bar-code';
 import { CartPage } from '../pages/cart/cart';
+import { CheckoutPage } from "../pages/checkout/checkout";
+import { SubCategoryPage } from "../pages/sub-category/sub-category";
+
+
 
 @NgModule({
   declarations: [
@@ -29,11 +39,14 @@ import { CartPage } from '../pages/cart/cart';
     ProductPage,
     EditDataPage,
     ScanBarCodePage,
-    CartPage
+    CartPage,
+    CheckoutPage,
+    SubCategoryPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    [HttpModule],
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,13 +60,22 @@ import { CartPage } from '../pages/cart/cart';
     ProductPage,
     EditDataPage,
     ScanBarCodePage,
-    CartPage
+    CartPage,
+    CheckoutPage,
+    SubCategoryPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BarcodeScanner
+    BarcodeScanner,
+    CatService,
+    OrderService,
+    // ProductService,
+    SubCatService
   ]
 })
 export class AppModule {}
+
+
+// json-server store.json -p 3500

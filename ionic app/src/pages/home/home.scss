@@ -1,1 +1,48 @@
-page-home {}
+page-home {
+    #topContainer {
+        text-align: center;
+        height: 50%;
+        width: 100%;
+    }
+    #scanBtn {
+        margin-left: 22%;
+        width: 50%;
+        height: 70%;
+        border-radius: 50%;
+        border: 2px solid lightgray;
+        background-color: grayscale(lighten($list-ios-border-color, 11%));
+        // background-color: silver;
+    }
+    #bottomContainer {
+        // margin-top: 50%;
+        height: 100%;
+        width: 100%;
+    }
+    #topLeft {
+        width: 50%;
+        height: 20%;
+        float: left;
+    }
+    #topRight {
+        width: 50%;
+        height: 20%;
+        float: left;
+    }
+    #bottomLeft {
+        width: 50%;
+        height: 20%;
+        float: left;
+    }
+    #bottomRight {
+        width: 50%;
+        height: 20%;
+        float: left;
+    }
+    .button {
+        width: 100%;
+        height: 100%;
+        border: solid white 2px;
+        -webkit-text-fill-color: gray;
+        background-color: lighten($toggle-md-active-color, 25%);
+    }
+}

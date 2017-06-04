@@ -8,6 +8,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { LoginPage } from '../pages/login/login';
 import { ScanBarCodePage } from '../pages/scan-bar-code/scan-bar-code';
 import { CategoriesPage } from '../pages/categories/categories';
+import { CartPage } from '../pages/cart/cart';
 
 
 @Component({
@@ -28,7 +29,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'shop Now',component:ScanBarCodePage},
       { title: 'profile',component:ProfilePage},
-      { title: 'Cart' , component:HomePage},
+      { title: 'Cart' , component:CartPage},
       { title: 'Categories' , component:CategoriesPage},
       { title: 'Sign Out',component:LoginPage}
     ];
@@ -47,6 +48,6 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
   }
 }

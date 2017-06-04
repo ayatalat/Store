@@ -4,6 +4,8 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+
 <ion-header>
 
     <ion-navbar>
@@ -34,7 +36,13 @@
 
         <ion-row>
             <ion-col center text-center>
-                <button (click)="addToCart()" ion-button full icon-left>Add To Cart</button>
+                <input type="number" id="productsNum" value="0">
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col center text-center>
+                <button (click)="presentToast()" ion-button full icon-left>Add To Cart</button>
             </ion-col>
         </ion-row>
 

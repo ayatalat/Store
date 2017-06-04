@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { CheckoutPage } from "../checkout/checkout";
 
 @Component({
   selector: 'page-cart',
@@ -12,6 +13,10 @@ export class CartPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartPage');
+  }
+
+  checkOut() {
+    this.navCtrl.push(CheckoutPage);
   }
 
 }

@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+// import { SubCategoryPage } from "../sub-category/sub-category";
 import { ProductsListPage } from '../products-list/products-list';
+
+import { Http } from '@angular/http';
+import { CatService } from "../../Services/catagory.service";
 
 @Component({
   selector: 'page-categories',
@@ -8,15 +12,19 @@ import { ProductsListPage } from '../products-list/products-list';
 })
 export class CategoriesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoriesPage');
   }
 
-  showAllProducts() {
+  showSubCategories() {
     this.navCtrl.push(ProductsListPage);
+  }
+
+  ListCategory() {
+        return this.catservice.categories;
   }
 
 }
