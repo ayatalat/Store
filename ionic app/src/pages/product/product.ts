@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { CartPage } from "../cart/cart";
+import { IncreaseCartCount } from "../../Services/increaseCartCount.service";
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-product',
@@ -8,7 +10,7 @@ import { CartPage } from "../cart/cart";
 })
 export class ProductPage {
 
-  constructor(private toastCtrl: ToastController,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public increaseCartCount:IncreaseCartCount,public http:Http ,private toastCtrl: ToastController,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -31,6 +33,7 @@ export class ProductPage {
   });
 
   toast.present();
+  this.increaseCartCount.increaseCart();
 }
 
 }

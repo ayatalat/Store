@@ -7,28 +7,20 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>Cart</ion-title>
+        <!--<ion-title>Cart</ion-title>-->
+        <div style="text-align:right">
+            <button id="notification-button" ion-button clear item-right>
+        <ion-icon name="md-cart" >
+          <ion-badge id="notifications-badge" color="danger">{{this.increaseCartCount.cartCount}}</ion-badge>                
+        </ion-icon>              
+    </button>
+        </div>
     </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
-    <!--<div class="row header">
-        <div class="col">product name</div>
-        <div class="col">quantity</div>
-        <div class="col">price</div>
-    </div>
-    <div class="row">
-        <div class="col">watch</div>
-        <div class="col">2</div>
-        <div class="col">300$</div>
-        <div><button class="button">Add</button></div>
-    </div>
-    <div>
-        <div><button class="button">checkout</button></div>
-    </div>-->
 
     <div class="row header">
         <div class="col">product name</div>

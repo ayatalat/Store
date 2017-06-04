@@ -9,8 +9,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpModule } from '@angular/http';
 import { CatService } from "../Services/catagory.service";
 import { OrderService } from "../Services/order.service";
-import { ProductService } from "../Services/product.service";
+// import { ProductService } from "../Services/product.service";
 import { SubCatService } from "../Services/subcatagory.service";
+import { IncreaseCartCount } from "../Services/increaseCartCount.service";
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -71,8 +72,9 @@ import { SubCategoryPage } from "../pages/sub-category/sub-category";
     BarcodeScanner,
     CatService,
     OrderService,
-    ProductService,
-    SubCatService
+    // ProductService,
+    SubCatService,
+    IncreaseCartCount
   ]
 })
 export class AppModule {}

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CheckoutPage } from "../checkout/checkout";
+import { IncreaseCartCount } from "../../Services/increaseCartCount.service";
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'page-cart',
@@ -8,7 +10,9 @@ import { CheckoutPage } from "../checkout/checkout";
 })
 export class CartPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  // cartCount:any;
+
+  constructor(public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -18,5 +22,22 @@ export class CartPage {
   checkOut() {
     this.navCtrl.push(CheckoutPage);
   }
+
+  increaseCount() {
+    
+    this.increaseCartCount.increaseCart();
+    console.log(this.increaseCartCount.cartCount);
+  }
+
+  // increaseCartCount() {
+    
+  //   if (!this.cartCount && this.cartCount != 0) {
+  //     this.cartCount = 1;
+  //   }
+  //   else {
+  //     this.cartCount = this.cartCount+1;
+  //   }
+  // }
+
 
 }
