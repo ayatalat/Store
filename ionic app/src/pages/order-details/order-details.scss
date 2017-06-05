@@ -1,0 +1,25 @@
+page-order-details {
+    #inputNum {
+        width: 80%;
+        height: 1005;
+    }
+    body {
+        cursor: url('http://ionicframework.com/img/finger.png'), auto;
+    }
+    .header .col {
+        background-color: lightgrey;
+    }
+    .col {
+        vertical-align: middle;
+        text-align: center;
+        border: solid 1px grey;
+        border-bottom-style: none;
+        border-right-style: none;
+    }
+    .col:last-child {
+        border-right: solid 1px grey;
+    }
+    .row:last-child .col {
+        border-bottom: solid 1px grey;
+    }
+}

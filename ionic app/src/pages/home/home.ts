@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { BarcodeScanner,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 import { ProfilePage } from '../profile/profile';
 import { CategoriesPage } from '../categories/categories';
-import { ScanBarCodePage } from '../scan-bar-code/scan-bar-code';
 import { CartPage } from "../cart/cart";
+import { OrderHistoryPage } from "../order-history/order-history";
+import { ProductPage } from "../product/product";
 
 
 @Component({
@@ -12,8 +14,22 @@ import { CartPage } from "../cart/cart";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  options: BarcodeScannerOptions;
+  result: {};
 
+  constructor(private barCode:BarcodeScanner,public navCtrl: NavController) {
+  }
+
+  async scanBarCode() {
+
+    this.options = {
+      prompt: 'Scan the bar code to see the result'
+    }
+
+    this.result = await this.barCode.scan(this.options);
+    console.log(this.result);
+
+    this.navCtrl.push(ProductPage);
   }
 
   showCategories() {
@@ -24,8 +40,12 @@ export class HomePage {
     this.navCtrl.push(ProfilePage);
   }
 
-  scanBarCode() {
-    this.navCtrl.push(ScanBarCodePage);
+  // scanBarCode() {
+  //   this.navCtrl.push(ScanBarCodePage);
+  // }
+
+  showHistory() {
+    this.navCtrl.push(OrderHistoryPage);
   }
 
   showCart() {

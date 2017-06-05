@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-// import { SubCategoryPage } from "../sub-category/sub-category";
-import { ProductsListPage } from '../products-list/products-list';
+import { SubCategoryPage } from "../sub-category/sub-category";
 
 import { Http } from '@angular/http';
 import { CatService } from "../../Services/catagory.service";
@@ -20,7 +19,7 @@ export class CategoriesPage {
   }
 
   showSubCategories() {
-    this.navCtrl.push(ProductsListPage);
+    this.navCtrl.push(SubCategoryPage);
   }
 
   ListCategory() {

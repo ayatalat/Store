@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 
-<!--
+
 <ion-header>
 
     <ion-navbar>
@@ -14,33 +14,46 @@
 
 </ion-header>
 
-
 <ion-content padding>
 
-    <ion-header>
-
-        <ion-navbar>
-            <ion-title>Categories</ion-title>
-        </ion-navbar>
-
-    </ion-header>
-
-
-    <ion-content padding>
-
-        <ion-grid>
-            <ion-row *ngFor="let catagory of ListCategory()">
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
                 <ion-card>
-                    <img src="../../assets/img/card-sf.jpg" (click)="showAllProducts()" />
+                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList()" />
                     <ion-card-content>
-                        <ion-card-title text-center (click)="showAllProducts()">
-                            <a href="#">{{catagory.name}}</a>
+                        <ion-card-title text-center (click)="showProductsList()">
+                            <a href="#" id="catName">iphone7</a>
                         </ion-card-title>
                         <p>
-                            {{catagory.description}}
                     </ion-card-content>
                 </ion-card>
-            </ion-row>
-        </ion-grid>
+            </ion-col>
 
-    </ion-content>-->
+            <ion-col col-6>
+                <ion-card>
+                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList()" />
+                    <ion-card-content>
+                        <ion-card-title text-center (click)="showProductsList()">
+                            <a href="#" id="catName">iphone7</a>
+                        </ion-card-title>
+                        <p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col col-6>
+                <ion-card>
+                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList()" />
+                    <ion-card-content>
+                        <ion-card-title text-center (click)="showProductsList()">
+                            <a href="#" id="catName">iphone7</a>
+                        </ion-card-title>
+                        <p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

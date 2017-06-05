@@ -9,7 +9,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { HttpModule } from '@angular/http';
 import { CatService } from "../Services/catagory.service";
 import { OrderService } from "../Services/order.service";
-// import { ProductService } from "../Services/product.service";
+import { ProductService } from "../Services/product.service";
 import { SubCatService } from "../Services/subcatagory.service";
 import { IncreaseCartCount } from "../Services/increaseCartCount.service";
 
@@ -25,6 +25,8 @@ import { ScanBarCodePage } from '../pages/scan-bar-code/scan-bar-code';
 import { CartPage } from '../pages/cart/cart';
 import { CheckoutPage } from "../pages/checkout/checkout";
 import { SubCategoryPage } from "../pages/sub-category/sub-category";
+import { OrderHistoryPage } from '../pages/order-history/order-history';
+import { OrderDetailsPage } from "../pages/order-details/order-details";
 
 
 
@@ -42,7 +44,9 @@ import { SubCategoryPage } from "../pages/sub-category/sub-category";
     ScanBarCodePage,
     CartPage,
     CheckoutPage,
-    SubCategoryPage
+    SubCategoryPage,
+    OrderHistoryPage,
+    OrderDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +67,9 @@ import { SubCategoryPage } from "../pages/sub-category/sub-category";
     ScanBarCodePage,
     CartPage,
     CheckoutPage,
-    SubCategoryPage
+    SubCategoryPage,
+    OrderHistoryPage,
+    OrderDetailsPage
   ],
   providers: [
     StatusBar,
@@ -72,7 +78,7 @@ import { SubCategoryPage } from "../pages/sub-category/sub-category";
     BarcodeScanner,
     CatService,
     OrderService,
-    // ProductService,
+    ProductService,
     SubCatService,
     IncreaseCartCount
   ]

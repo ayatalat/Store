@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { ScanBarCodePage } from '../pages/scan-bar-code/scan-bar-code';
 import { CategoriesPage } from '../pages/categories/categories';
 import { CartPage } from '../pages/cart/cart';
+import { OrderHistoryPage } from "../pages/order-history/order-history";
 
 
 
@@ -32,6 +33,7 @@ export class MyApp {
       { title: 'profile',component:ProfilePage},
       { title: 'Cart' , component:CartPage},
       { title: 'Categories' , component:CategoriesPage},
+      { title: 'History' , component:OrderHistoryPage},
       { title: 'Sign Out',component:LoginPage}
     ];
 

@@ -29,15 +29,5 @@ export class CartPage {
     console.log(this.increaseCartCount.cartCount);
   }
 
-  // increaseCartCount() {
-    
-  //   if (!this.cartCount && this.cartCount != 0) {
-  //     this.cartCount = 1;
-  //   }
-  //   else {
-  //     this.cartCount = this.cartCount+1;
-  //   }
-  // }
-
 
 }
