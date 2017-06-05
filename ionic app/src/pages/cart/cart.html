@@ -1,55 +1,26 @@
-<!--<ion-header>
-    <ion-navbar>
-        <div style="text-align:right">
-            <button id="notification-button" ion-button clear item-right>
-        <ion-icon name="md-cart" >
-          <ion-badge id="notifications-badge" color="danger">{{this.increaseCartCount.cartCount}}</ion-badge>                
-        </ion-icon>              
-    </button>
-        </div>
-    </ion-navbar>
-</ion-header>-->
-<header></header>
+<header>
+</header>
 
 
 <ion-content padding>
 
-    <div class="row header">
+    <div class="row header" ng-if="productsArrLength == 0">
         <div class="col">product name</div>
         <div class="col">quantity</div>
         <div class="col">price</div>
         <div class="col"></div>
     </div>
 
-    <div class="row">
-        <div class="col">watch</div>
-        <div class="col"><input type="number" value="2" id="inputNum"></div>
-        <div class="col">300$</div>
-        <div class="col"><button class="button" style="background-color:white"><ion-icon name="md-trash"></ion-icon></button></div>
-    </div>
-
-    <div class="row">
-        <div class="col">watch</div>
-        <div class="col"><input type="number" value="2" id="inputNum"></div>
-        <div class="col">300$</div>
-        <div class="col"><button class="button" style="background-color:white"><ion-icon name="md-trash"></ion-icon></button></div>
-    </div>
-
-    <div class="row">
-        <div class="col">watch</div>
-        <div class="col"><input type="number" value="2" id="inputNum"></div>
-        <div class="col">300$</div>
-        <div class="col"><button class="button" style="background-color:white"><ion-icon name="md-trash"></ion-icon></button></div>
-    </div>
-
-    <div class="row">
-        <div class="col">watch</div>
-        <div class="col"><input type="number" value="2" id="inputNum"></div>
-        <div class="col">300$</div>
+    <div class="row" *ngFor="let product of Listproducts()">
+        <div class="col">{{product.title}}</div>
+        <div class="col"><input type="number" value={{product.quantity}} id="inputNum"></div>
+        <div class="col">{{product.price}}$</div>
         <div class="col"><button class="button" style="background-color:white"><ion-icon name="md-trash"></ion-icon></button></div>
     </div>
 
     <br/>
-    <button (click)="checkOut()" ion-button full>Checkout</button>
+    <div>
+        <button (click)="checkOut()" ion-button full>Checkout</button>
+    </div>
 
 </ion-content>

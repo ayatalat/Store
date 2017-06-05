@@ -12,6 +12,7 @@ import { OrderService } from "../Services/order.service";
 import { ProductService } from "../Services/product.service";
 import { SubCatService } from "../Services/subcatagory.service";
 import { IncreaseCartCount } from "../Services/increaseCartCount.service";
+import { PassProduct } from "../Services/passProducts.service";
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -82,7 +83,8 @@ import { HeaderComponent } from '../components/header/header';
     OrderService,
     ProductService,
     SubCatService,
-    IncreaseCartCount
+    IncreaseCartCount,
+    PassProduct
   ]
 })
 export class AppModule {}

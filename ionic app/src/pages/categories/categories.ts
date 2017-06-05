@@ -11,6 +11,8 @@ import { CatService } from "../../Services/catagory.service";
 })
 export class CategoriesPage {
 
+  cat_id:any;
+
   constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
 

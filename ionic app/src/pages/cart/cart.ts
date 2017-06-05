@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CheckoutPage } from "../checkout/checkout";
 import { IncreaseCartCount } from "../../Services/increaseCartCount.service";
+import { PassProduct } from "../../Services/passProducts.service";
 import { Http } from '@angular/http';
 
 @Component({
@@ -10,8 +11,9 @@ import { Http } from '@angular/http';
 })
 export class CartPage {
 
+  productsArrLength:number = this.passProductService.products.length;
 
-  constructor(public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public passProductService:PassProduct, public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -26,6 +28,10 @@ export class CartPage {
     
     this.increaseCartCount.increaseCart();
     console.log(this.increaseCartCount.cartCount);
+  }
+
+  Listproducts() {
+    return this.passProductService.products;
   }
 
 
