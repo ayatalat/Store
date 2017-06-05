@@ -27,6 +27,7 @@ import { CheckoutPage } from "../pages/checkout/checkout";
 import { SubCategoryPage } from "../pages/sub-category/sub-category";
 import { OrderHistoryPage } from '../pages/order-history/order-history';
 import { OrderDetailsPage } from "../pages/order-details/order-details";
+import { HeaderComponent } from '../components/header/header';
 
 
 
@@ -46,7 +47,8 @@ import { OrderDetailsPage } from "../pages/order-details/order-details";
     CheckoutPage,
     SubCategoryPage,
     OrderHistoryPage,
-    OrderDetailsPage
+    OrderDetailsPage,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

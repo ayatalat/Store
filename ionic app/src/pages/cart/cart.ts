@@ -10,7 +10,6 @@ import { Http } from '@angular/http';
 })
 export class CartPage {
 
-  // cartCount:any;
 
   constructor(public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController, public navParams: NavParams) {
   }

@@ -1,0 +1,13 @@
+<ion-header>
+
+    <ion-navbar>
+        <div style="text-align:right">
+            <button id="notification-button" ion-button clear item-right (click)="showCartPage()">
+        <ion-icon name="md-cart" >
+          <ion-badge id="notifications-badge" color="danger">{{this.increaseCartCount.cartCount}}</ion-badge>                
+        </ion-icon>            
+    </button>
+        </div>
+    </ion-navbar>
+
+</ion-header>
