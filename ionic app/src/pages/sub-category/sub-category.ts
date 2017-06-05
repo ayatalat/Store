@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ProductsListPage } from '../products-list/products-list';
 
-// import { Http } from '@angular/http';
-// import { SubCatService } from "../../Services/subcatagory.service";
+import { Http } from '@angular/http';
+import { CatService } from "../../Services/catagory.service";
 
 @Component({
   selector: 'page-sub-category',
@@ -11,7 +11,7 @@ import { ProductsListPage } from '../products-list/products-list';
 })
 export class SubCategoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -21,9 +21,5 @@ export class SubCategoryPage {
   showProductsList() {
     this.navCtrl.push(ProductsListPage);
   }
-
-  // ListCategory() {
-  //       return this.subcatservice.categories;
-  // }
 
 }

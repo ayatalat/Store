@@ -2,17 +2,17 @@
     <ion-row>
         <ion-col col-10>
             <div style="text-align:center">
-             <ion-title>{{text}}</ion-title>
+                <ion-title>{{text}}</ion-title>
             </div>
         </ion-col>
-            <ion-col col-2>
+        <ion-col col-2>
             <div style="text-align:right">
                 <button id="notification-button" ion-button clear item-right (click)="showCartPage()">
                     <ion-icon name="md-cart" >
-                        <ion-badge id="notifications-badge" color="danger">{{this.increaseCartCount.cartCount}}</ion-badge>                
+                        <ion-badge id="notifications-badge" color="danger">{{productsArrLength}}</ion-badge>                
                     </ion-icon>            
                 </button>
             </div>
-             </ion-col>
+        </ion-col>
     </ion-row>
 </ion-navbar>

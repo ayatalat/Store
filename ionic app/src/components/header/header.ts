@@ -3,6 +3,7 @@ import { IncreaseCartCount } from "../../Services/increaseCartCount.service";
 import { Http } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import { CartPage } from "../../pages/cart/cart";
+import { PassProduct } from "../../Services/passProducts.service";
 
 @Component({
   selector: 'header',
@@ -10,17 +11,13 @@ import { CartPage } from "../../pages/cart/cart";
 })
 export class HeaderComponent {
 
+  productsArrLength:number = this.passProductService.products.length;
+
   @Input('myTitle') myTitle;
   text:String;
 
-  constructor(public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController) {
+  constructor(public passProductService:PassProduct, public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController) {
     
-  }
-
-  increaseCount() {
-    
-    this.increaseCartCount.increaseCart();
-    console.log(this.increaseCartCount.cartCount);
   }
 
   showCartPage() {

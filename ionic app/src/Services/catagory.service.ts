@@ -24,15 +24,6 @@ export class CatService {
         return this.catagories;
     }
 
-    getAllSubCategories(id:number) {
-        return this.http.get(this.catUrl).map((response: Response) => response.json())
-            .subscribe(data => {
-                this.catagories = data
-            },
-            err => console.log(`error happened getting todos ${err}`)
-            );
-    }
-
     addCatagory(name: string, descripation: string) {
         if (name != "" && descripation != "") {
             let newcatagory = {
