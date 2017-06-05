@@ -10,8 +10,8 @@ import { CartPage } from "../../pages/cart/cart";
 })
 export class HeaderComponent {
 
-  @Input('myText') textToUse;
-  text: string;
+  @Input('myTitle') myTitle;
+  text:String;
 
   constructor(public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController) {
     
@@ -25,6 +25,10 @@ export class HeaderComponent {
 
   showCartPage() {
     this.navCtrl.push(CartPage);
+  }
+
+  ngAfterViewInit() {
+    this.text = this.myTitle;
   }
 
 }
