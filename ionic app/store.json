@@ -1,122 +1,145 @@
 {
-    "products": [{
-            "name": "hind",
-            "barcode": "123456789123",
-            "price": "200",
-            "quantity": "3",
-            "descripation": "product 1",
-            "image": "",
-            "status": 1,
-            "cat_id": 1,
-            "id": 1
-        },
-        {
-            "name": "hind2",
-            "barcode": "123456789123",
-            "price": "200",
-            "quantity": "3",
-            "descripation": "product 2",
-            "image": "",
-            "status": 1,
-            "cat_id": 2,
-            "id": 2
-        },
-        {
-            "name": "hind3",
-            "barcode": "123456789123",
-            "price": "200",
-            "quantity": "3",
-            "descripation": "product 3",
-            "image": "",
-            "status": 1,
-            "cat_id": 3,
-            "id": 3
-        },
-        {
-            "name": "hind4",
-            "barcode": "123456789123",
-            "price": "200",
-            "quantity": "3",
-            "descripation": "product 4",
-            "image": "",
-            "status": 1,
-            "cat_id": 4,
-            "id": 4
-        },
-        {
-            "name": "hind5",
-            "barcode": "123456789123",
-            "price": "200",
-            "quantity": "3",
-            "descripation": "product 5",
-            "image": "",
-            "status": 1,
-            "cat_id": 5,
-            "id": 5
-        }
-    ],
-    "category": [{
-            "name": "electronics",
-            "id_subcat": null,
-            "description": "new descrption",
-            "status": 1,
-            "id": 1
-        },
-        {
-            "id": 2,
-            "name": "mobiles",
-            "id_subcat": 1,
-            "status": 1,
-            "description": "descripation"
-        },
-        {
-            "id": 3,
-            "name": "meats",
-            "id_subcat": null,
-            "status": 1,
-            "description": "descripation"
-        },
-        {
-            "id": 4,
-            "name": "chickens",
-            "id_subcat": 3,
-            "status": 1,
-            "description": "descripation"
-        },
-        {
-            "name": "newsub",
-            "id_subcat": 1,
-            "status": 1,
-            "description": "newsub",
-            "id": 5
-        }
-    ],
-    "orders": [{
-            "id": 1,
-            "date_added": "2011-07-14 19:43:37 +0100",
-            "iduser": 1,
-            "status": 1,
-            "date_delivered": "2017-05-15 19:43:37 +0100"
-        },
-        {
-            "id": 2,
-            "date_added": "2017-05-13 19:43:37 +0100",
-            "iduser": 2,
-            "status": 1,
-            "date_delivered": "2017-05-12 19:43:37 +0100"
-        }
-    ],
-    "cart": [{
-        "count": 0
-    }],
-    "passproduct": [{
-        "title": "product",
-        "quantity": 2,
-        "price": 200,
-        "description": "description",
-        "id": 1
-    }],
-    "user": [
-
-    ]
+  "products": [
+    {
+      "name": "hind",
+      "barcode": "123456789123",
+      "price": "200",
+      "quantity": "3",
+      "descripation": "product 1",
+      "image": "",
+      "status": 1,
+      "cat_id": 1,
+      "id": 1
+    },
+    {
+      "name": "hind2",
+      "barcode": "123456789123",
+      "price": "200",
+      "quantity": "3",
+      "descripation": "product 2",
+      "image": "",
+      "status": 1,
+      "cat_id": 2,
+      "id": 2
+    },
+    {
+      "name": "hind3",
+      "barcode": "123456789123",
+      "price": "200",
+      "quantity": "3",
+      "descripation": "product 3",
+      "image": "",
+      "status": 1,
+      "cat_id": 3,
+      "id": 3
+    },
+    {
+      "name": "hind4",
+      "barcode": "123456789123",
+      "price": "200",
+      "quantity": "3",
+      "descripation": "product 4",
+      "image": "",
+      "status": 1,
+      "cat_id": 4,
+      "id": 4
+    },
+    {
+      "name": "hind5",
+      "barcode": "123456789123",
+      "price": "200",
+      "quantity": "3",
+      "descripation": "product 5",
+      "image": "",
+      "status": 1,
+      "cat_id": 5,
+      "id": 5
+    }
+  ],
+  "category": [
+    {
+      "name": "electronics",
+      "id_subcat": null,
+      "description": "new descrption",
+      "status": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "mobiles",
+      "id_subcat": 1,
+      "status": 1,
+      "description": "descripation"
+    },
+    {
+      "id": 3,
+      "name": "meats",
+      "id_subcat": null,
+      "status": 1,
+      "description": "descripation"
+    },
+    {
+      "id": 4,
+      "name": "chickens",
+      "id_subcat": 3,
+      "status": 1,
+      "description": "descripation"
+    },
+    {
+      "name": "newsub",
+      "id_subcat": 1,
+      "status": 1,
+      "description": "newsub",
+      "id": 5
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "date_added": "2011-07-14 19:43:37 +0100",
+      "iduser": 1,
+      "status": 1,
+      "date_delivered": "2017-05-15 19:43:37 +0100"
+    },
+    {
+      "id": 2,
+      "date_added": "2017-05-13 19:43:37 +0100",
+      "iduser": 2,
+      "status": 1,
+      "date_delivered": "2017-05-12 19:43:37 +0100"
+    }
+  ],
+  "cart": [
+    {
+      "count": 0
+    }
+  ],
+  "passproduct": [
+    {
+      "title": "product",
+      "quantity": 2,
+      "price": 200,
+      "description": "description",
+      "id": 1
+    },
+    {
+      "title": "product",
+      "quantity": 2,
+      "price": 200,
+      "description": "description",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "userName": "shimaa",
+      "email": "shimaa",
+      "mobile": "shimaa",
+      "country": "shimaa",
+      "city": "shimaa",
+      "state": "shimaa",
+      "password": "shimaa",
+      "id": 1
+    }
+  ]
 }
