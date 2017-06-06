@@ -1,15 +1,60 @@
 {
     "products": [{
-        "name": "hind",
-        "barcode": "123456789123",
-        "price": "200",
-        "quantity": "3",
-        "descripation": "product 1",
-        "image": "",
-        "status": 1,
-        "cat_id": 1,
-        "id": 1
-    }],
+            "name": "hind",
+            "barcode": "123456789123",
+            "price": "200",
+            "quantity": "3",
+            "descripation": "product 1",
+            "image": "",
+            "status": 1,
+            "cat_id": 1,
+            "id": 1
+        },
+        {
+            "name": "hind2",
+            "barcode": "123456789123",
+            "price": "200",
+            "quantity": "3",
+            "descripation": "product 2",
+            "image": "",
+            "status": 1,
+            "cat_id": 2,
+            "id": 2
+        },
+        {
+            "name": "hind3",
+            "barcode": "123456789123",
+            "price": "200",
+            "quantity": "3",
+            "descripation": "product 3",
+            "image": "",
+            "status": 1,
+            "cat_id": 3,
+            "id": 3
+        },
+        {
+            "name": "hind4",
+            "barcode": "123456789123",
+            "price": "200",
+            "quantity": "3",
+            "descripation": "product 4",
+            "image": "",
+            "status": 1,
+            "cat_id": 4,
+            "id": 4
+        },
+        {
+            "name": "hind5",
+            "barcode": "123456789123",
+            "price": "200",
+            "quantity": "3",
+            "descripation": "product 5",
+            "image": "",
+            "status": 1,
+            "cat_id": 5,
+            "id": 5
+        }
+    ],
     "category": [{
             "name": "electronics",
             "id_subcat": null,
@@ -43,7 +88,7 @@
             "id_subcat": 1,
             "status": 1,
             "description": "newsub",
-            "id": 8
+            "id": 5
         }
     ],
     "orders": [{
@@ -64,7 +109,14 @@
     "cart": [{
         "count": 0
     }],
-    "passproduct": [
+    "passproduct": [{
+        "title": "product",
+        "quantity": 2,
+        "price": 200,
+        "description": "description",
+        "id": 1
+    }],
+    "user": [
 
     ]
 }
