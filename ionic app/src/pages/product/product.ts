@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { CartPage } from "../cart/cart";
-import { IncreaseCartCount } from "../../Services/increaseCartCount.service";
 import { Http } from '@angular/http';
 import { PassProduct } from "../../Services/passProducts.service";
 
@@ -16,7 +15,7 @@ export class ProductPage {
   price:number = 200;
   description = "description";
 
-  constructor(public passProductService:PassProduct, public increaseCartCount:IncreaseCartCount,public http:Http ,private toastCtrl: ToastController,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public passProductService:PassProduct,public http:Http ,private toastCtrl: ToastController,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -40,7 +39,6 @@ export class ProductPage {
 
   toast.present();
   this.passProductService.addProduct(this.title,this.quantity,this.price,this.description);
-  this.increaseCartCount.increaseCart();
 }
 
 }

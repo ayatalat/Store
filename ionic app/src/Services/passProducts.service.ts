@@ -42,8 +42,6 @@ export class PassProduct {
                 .subscribe(
                 data => {
                     this.products.push(data);
-                    //name = '';
-                   // descripation = '';
 
                 },
                 (err) => console.log(`errror ${err}`)

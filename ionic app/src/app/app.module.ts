@@ -11,7 +11,6 @@ import { CatService } from "../Services/catagory.service";
 import { OrderService } from "../Services/order.service";
 import { ProductService } from "../Services/product.service";
 import { SubCatService } from "../Services/subcatagory.service";
-import { IncreaseCartCount } from "../Services/increaseCartCount.service";
 import { PassProduct } from "../Services/passProducts.service";
 
 import { HomePage } from '../pages/home/home';
@@ -83,7 +82,6 @@ import { HeaderComponent } from '../components/header/header';
     OrderService,
     ProductService,
     SubCatService,
-    IncreaseCartCount,
     PassProduct
   ]
 })

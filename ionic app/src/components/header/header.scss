@@ -1,5 +1,4 @@
 header {
-    
     #notification-button {
         position: relative;
         width: 42px;
@@ -14,9 +13,10 @@ header {
         left: -3px;
         border-radius: 100%;
     }
-    #header
-    {
-padding: -100px;
+    #header {
+        padding: -100px;
     }
-    
+    .ion-icon {
+        background-color: transparent;
+    }
 }

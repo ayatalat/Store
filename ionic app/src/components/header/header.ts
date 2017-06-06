@@ -1,5 +1,4 @@
-import { Component,Input,Output,EventEmitter } from '@angular/core';
-import { IncreaseCartCount } from "../../Services/increaseCartCount.service";
+import { Component,Input} from '@angular/core';
 import { Http } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import { CartPage } from "../../pages/cart/cart";
@@ -11,13 +10,22 @@ import { PassProduct } from "../../Services/passProducts.service";
 })
 export class HeaderComponent {
 
-  productsArrLength:number = this.passProductService.products.length;
+  // productsArrLength:number = this.passProductService.products.length;
+  productsArrLength:number;
 
   @Input('myTitle') myTitle;
   text:String;
 
-  constructor(public passProductService:PassProduct, public increaseCartCount:IncreaseCartCount,public http:Http ,public navCtrl: NavController) {
-    
+  constructor(public passProductService:PassProduct,public http:Http ,public navCtrl: NavController) {
+  }
+
+  checkArrLength() {
+    if(this.passProductService.products.length ==0) {
+      !this.productsArrLength;
+    } else {
+      this.productsArrLength = this.passProductService.products.length;
+    }
+    return this.productsArrLength;
   }
 
   showCartPage() {
