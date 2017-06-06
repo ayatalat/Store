@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyApp } from './app.component';
+import { RouterModule } from "@angular/router";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { HttpModule } from '@angular/http';
@@ -53,7 +54,10 @@ import { HeaderComponent } from '../components/header/header';
   imports: [
     BrowserModule,
     [HttpModule],
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    RouterModule.forRoot([
+      {path:"subcatagory/:id",component:SubCategoryPage}
+    ])
   ],
   bootstrap: [IonicApp],
   entryComponents: [

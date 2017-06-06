@@ -13,16 +13,16 @@ export class CategoriesPage {
 
   cat_id:any;
 
-  constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private catservice: CatService, private http: Http,private navCtrl: NavController, private navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoriesPage');
   }
 
-  showSubCategories() {
-    this.navCtrl.push(SubCategoryPage);
-  }
+  // showSubCategories() {
+  //   this.navCtrl.push(SubCategoryPage);
+  // }
 
   ListCategory() {
         return this.catservice.categories;

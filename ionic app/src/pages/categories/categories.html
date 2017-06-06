@@ -1,5 +1,5 @@
 <ion-header>
-   <header  myTitle="Catrgories"></header>
+    <header myTitle="Catrgories"></header>
 </ion-header>
 
 
@@ -8,11 +8,11 @@
     <ion-grid>
         <ion-row>
             <ion-col col-6 *ngFor="let catagory of ListCategory()">
-                <ion-card>
-                    <img src="../../assets/img/card-sf.jpg" (click)="showSubCategories()" />
+                <ion-card *ngIf="catagory.id_subcat == null">
+                    <img src="../../assets/img/card-sf.jpg" />
                     <ion-card-content>
-                        <ion-card-title text-center (click)="showSubCategories()">
-                            <a href="#" id="catName">{{catagory.name}}</a>
+                        <ion-card-title text-center>
+                            <a [routerLink]="['/subcatagory/',catagory.id]" id="catName">{{catagory.name}}</a>
                         </ion-card-title>
                         <p>
                             <!--<input type="hidden" value="{{category.id}}" />
