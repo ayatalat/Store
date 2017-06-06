@@ -14,10 +14,10 @@ export class UserService {
    
     userUrl = " http://localhost:3500/user";
     constructor(private http: Http) {
-        this.listProducts();
+        this.listUsers();
     }
 
-    listProducts() {
+    listUsers() {
         return this.http.get(this.userUrl).map((response: Response) => response.json())
             .subscribe(data => {
                 this.users = data
@@ -29,7 +29,7 @@ export class UserService {
         return this.users;
     }
 
-    addProduct(userName: string,email:string,mobile:number, country: string,city:string,state:string,password:string) {
+    addUser(userName: string,email:string,mobile:number, country: string,city:string,state:string,password:string) {
         if (userName != "" && email != "" && country != "" && city != "" && state != "" && password != "" && mobile !=NaN) {
             let newUser = {
                 

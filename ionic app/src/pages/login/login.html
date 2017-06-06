@@ -21,7 +21,7 @@
         <ion-row>
             <ion-col>
                 <ion-card>
-                    <input type="text" placeholder="E-mail" ng-model="data.email" class="inputText">
+                    <input type="text" placeholder="E-mail" class="inputText" #email>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -30,7 +30,7 @@
         <ion-row>
             <ion-col>
                 <ion-card>
-                    <input type="text" placeholder="password" ng-model="data.password" class="inputText">
+                    <input type="text" placeholder="password" class="inputText" #password>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -38,7 +38,13 @@
         <!--Third Row-->
         <ion-row>
             <ion-col>
-                <button (click)="loginToHome()" ion-button full icon-left><ion-icon name="login"></ion-icon>Login</button>
+                <button (click)="loginToHome(email.value,password.value)" ion-button full icon-left><ion-icon name="login"></ion-icon>Login</button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <label id="msgLbl">{{msg}}</label>
             </ion-col>
         </ion-row>
 

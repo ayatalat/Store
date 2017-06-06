@@ -7,34 +7,36 @@
 
 <ion-content padding>
 
-    <ion-card *ngFor="let product of ListProduct()">
+    <div *ngFor="let product of ListProduct()">
+        <ion-card *ngIf="product.id == product_id">
 
-        <img src="../../assets/img/iphon7.jpg">
+            <img src="../../assets/img/iphon7.jpg">
 
-        <ion-card-content>
-            <p>{{product.descripation}}</p>
-        </ion-card-content>
+            <ion-card-content>
+                <p>{{product.descripation}}</p>
+            </ion-card-content>
 
-        <ion-row>
-            <ion-col center text-center>
-                <ion-note>
-                    {{product.price}}
-                </ion-note>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col center text-center>
+                    <ion-note>
+                        {{product.price}}
+                    </ion-note>
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col center text-center>
-                <input type="number" id="productsNum" value="0">
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col center text-center>
+                    <input type="number" id="productsNum" value="0">
+                </ion-col>
+            </ion-row>
 
-        <ion-row>
-            <ion-col center text-center>
-                <button (click)="presentToast()" ion-button full icon-left>Add To Cart</button>
-            </ion-col>
-        </ion-row>
+            <ion-row>
+                <ion-col center text-center>
+                    <button (click)="presentToast()" ion-button full icon-left>Add To Cart</button>
+                </ion-col>
+            </ion-row>
 
-    </ion-card>
+        </ion-card>
+    </div>
 
 </ion-content>

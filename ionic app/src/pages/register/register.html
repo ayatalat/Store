@@ -19,21 +19,21 @@
         <!--Row 1 -->
         <ion-row>
             <ion-col>
-                <input type="text" placeholder="username" ng-model="data.username" class="inputText">
+                <input type="text" placeholder="username" class="inputText" #username>
             </ion-col>
         </ion-row>
 
         <!--Row 2 -->
         <ion-row>
             <ion-col>
-                <input type="text" placeholder="E-mail" ng-model="data.email" class="inputText">
+                <input type="text" placeholder="E-mail" class="inputText" #email>
             </ion-col>
         </ion-row>
 
         <!--Row 3 -->
         <ion-row>
             <ion-col>
-                <input type="text" placeholder="Mobile Number" class="inputText">
+                <input type="text" placeholder="Mobile Number" class="inputText" #mobile>
             </ion-col>
         </ion-row>
 
@@ -45,9 +45,9 @@
             <ion-grid>
                 <ion-row>
                     <ion-col>
-                        <input type="text" placeholder="Country" class="inputText">
-                        <input type="text" placeholder="City" class="inputText">
-                        <input type="text" placeholder="State" class="inputText">
+                        <input type="text" placeholder="Country" class="inputText" #country>
+                        <input type="text" placeholder="City" class="inputText" #city>
+                        <input type="text" placeholder="State" class="inputText" #state>
                     </ion-col>
                 </ion-row>
             </ion-grid>
@@ -56,21 +56,21 @@
         <!-- Row 5 -->
         <ion-row>
             <ion-col>
-                <input type="password" placeholder="password" ng-model="data.password" class="inputText">
+                <input type="password" placeholder="password" class="inputText" #password>
             </ion-col>
         </ion-row>
 
         <!-- Row 6-->
         <ion-row>
             <ion-col>
-                <input type="password" placeholder="confirm password" ng-model="data.password" class="inputText">
+                <input type="password" placeholder="confirm password" class="inputText">
             </ion-col>
         </ion-row>
 
         <!-- Row 7-->
         <ion-row>
             <ion-col>
-                <button (click)="loginToHome()" ion-button full icon-left><ion-icon name="login"></ion-icon>Login</button>
+                <button (click)="register(username.value,email.value,mobile.value,country.value,city.value,state.value,password.value)" ion-button full icon-left><ion-icon name="login"></ion-icon>Register</button>
             </ion-col>
         </ion-row>
 

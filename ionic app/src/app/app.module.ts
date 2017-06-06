@@ -13,6 +13,7 @@ import { OrderService } from "../Services/order.service";
 import { ProductService } from "../Services/product.service";
 import { SubCatService } from "../Services/subcatagory.service";
 import { PassProduct } from "../Services/passProducts.service";
+import { UserService } from "../Services/user.service";
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -86,7 +87,8 @@ import { HeaderComponent } from '../components/header/header';
     OrderService,
     ProductService,
     SubCatService,
-    PassProduct
+    PassProduct,
+    UserService
   ]
 })
 export class AppModule {}
