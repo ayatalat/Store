@@ -1,71 +1,70 @@
 {
-  "products": [
-    {
-      "name": "hind",
-      "barcode": "123456789123",
-      "price": "200",
-      "quantity": "3",
-      "descripation": "product 1",
-      "image": "",
-      "status": 1,
-      "cat_id": 1,
-      "id": 1
-    }
-  ],
-  "category": [
-    {
-      "name": "electronics",
-      "id_subcat": null,
-      "description": "new descrption",
-      "status": 1,
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "mobiles",
-      "id_subcat": 1,
-      "status": 1,
-      "description": "descripation"
-    },
-    {
-      "id": 3,
-      "name": "meats",
-      "id_subcat": null,
-      "status": 1,
-      "description": "descripation"
-    },
-    {
-      "id": 4,
-      "name": "chickens",
-      "id_subcat": 3,
-      "status": 1,
-      "description": "descripation"
-    },
-    {
-      "name": "newsub",
-      "id_supcat": 2,
-      "status": 1,
-      "description": "newsub",
-      "id": 8
-    }
-  ],
-  "orders": [
-    {
-      "id": 1,
-      "date_added": "2011-07-14 19:43:37 +0100",
-      "iduser": 1,
-      "status": 1,
-      "date_delivered": "2017-05-15 19:43:37 +0100"
-    },
-    {
-      "id": 2,
-      "date_added": "2017-05-13 19:43:37 +0100",
-      "iduser": 2,
-      "status": 1,
-      "date_delivered": "2017-05-12 19:43:37 +0100"
-    }
-  ],
+    "products": [{
+        "name": "hind",
+        "barcode": "123456789123",
+        "price": "200",
+        "quantity": "3",
+        "descripation": "product 1",
+        "image": "",
+        "status": 1,
+        "cat_id": 1,
+        "id": 1
+    }],
+    "category": [{
+            "name": "electronics",
+            "id_subcat": null,
+            "description": "new descrption",
+            "status": 1,
+            "id": 1
+        },
+        {
+            "id": 2,
+            "name": "mobiles",
+            "id_subcat": 1,
+            "status": 1,
+            "description": "descripation"
+        },
+        {
+            "id": 3,
+            "name": "meats",
+            "id_subcat": null,
+            "status": 1,
+            "description": "descripation"
+        },
+        {
+            "id": 4,
+            "name": "chickens",
+            "id_subcat": 3,
+            "status": 1,
+            "description": "descripation"
+        },
+        {
+            "name": "newsub",
+            "id_subcat": 1,
+            "status": 1,
+            "description": "newsub",
+            "id": 8
+        }
+    ],
+    "orders": [{
+            "id": 1,
+            "date_added": "2011-07-14 19:43:37 +0100",
+            "iduser": 1,
+            "status": 1,
+            "date_delivered": "2017-05-15 19:43:37 +0100"
+        },
+        {
+            "id": 2,
+            "date_added": "2017-05-13 19:43:37 +0100",
+            "iduser": 2,
+            "status": 1,
+            "date_delivered": "2017-05-12 19:43:37 +0100"
+        }
+    ],
     "cart": [{
         "count": 0
-    }]
+    }],
+    "passproduct": [
+
+    ]
 }
