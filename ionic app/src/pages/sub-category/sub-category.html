@@ -8,36 +8,12 @@
 
     <ion-grid>
         <ion-row>
-            <ion-col col-6>
-                <ion-card>
-                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList()" />
+            <ion-col col-6 *ngFor="let catagory of ListCategory()">
+                <ion-card *ngIf="catagory.id_subcat == cat_id">
+                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList($event,catagory.id)" />
                     <ion-card-content>
-                        <ion-card-title text-center (click)="showProductsList()">
-                            <a href="#" id="catName">iphone7</a>
-                        </ion-card-title>
-                        <p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-
-            <ion-col col-6>
-                <ion-card>
-                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList()" />
-                    <ion-card-content>
-                        <ion-card-title text-center (click)="showProductsList()">
-                            <a href="#" id="catName">iphone7</a>
-                        </ion-card-title>
-                        <p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-
-            <ion-col col-6>
-                <ion-card>
-                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList()" />
-                    <ion-card-content>
-                        <ion-card-title text-center (click)="showProductsList()">
-                            <a href="#" id="catName">iphone7</a>
+                        <ion-card-title text-center (click)="showProductsList($event,catagory.id)">
+                            <a href="#" id="catName">{{catagory.name}}</a>
                         </ion-card-title>
                         <p>
                     </ion-card-content>

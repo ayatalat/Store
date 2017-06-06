@@ -14,18 +14,19 @@ export class CategoriesPage {
   catid:any;
 
   constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
-   // console.log(navParams);
-    console.log(this.catid);
+    //console.log(this.catid);
 }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoriesPage');
   }
 
-  showSubCategories() {
-    this.navCtrl.push(SubCategoryPage, {
-    param1:1
-  })
+  showSubCategories($event,catagoryId) {
+    this.navCtrl.push(SubCategoryPage,{
+      "param":catagoryId
+    })
+    console.log(catagoryId);
+    
   }
 
   ListCategory() {

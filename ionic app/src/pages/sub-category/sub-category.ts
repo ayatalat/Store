@@ -14,16 +14,24 @@ export class SubCategoryPage {
   cat_id:number;
 
   constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
-    this.cat_id=navParams.get("param1");
-    console.log(this.cat_id);
+    this.cat_id=navParams.get("param");
+    console.log(this.cat_id)
+  
 }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SubCategoryPage');
   }
 
-  showProductsList() {
-    this.navCtrl.push(ProductsListPage);
+  showProductsList($event,catagoryId) {
+    this.navCtrl.push(ProductsListPage,{
+      "param":catagoryId
+    })
+    console.log(catagoryId);
+  }
+
+  ListCategory() {
+        return this.catservice.categories;
   }
 
 }

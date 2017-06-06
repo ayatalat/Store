@@ -9,13 +9,13 @@
         <ion-row>
             <ion-col col-6 *ngFor="let catagory of ListCategory()">
                 <ion-card *ngIf="catagory.id_subcat == null">
-                    <img src="../../assets/img/card-sf.jpg" (click)="showSubCategories()" />
+                    <img src="../../assets/img/card-sf.jpg" (click)="showSubCategories($event,catagory.id)" />
                     <ion-card-content>
-                        <ion-card-title text-center (click)="showSubCategories()">
+                        <ion-card-title text-center (click)="showSubCategories($event,catagory.id)">
                             <a href="#" id="catName">{{catagory.name}}</a>
                         </ion-card-title>
                         <p>
-                            <input type="hidden" value="catagory.id" name="catid" [(ngModel)]="cat_id" />
+
                     </ion-card-content>
                 </ion-card>
             </ion-col>

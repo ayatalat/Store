@@ -3,6 +3,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { CartPage } from "../cart/cart";
 import { Http } from '@angular/http';
 import { PassProduct } from "../../Services/passProducts.service";
+import { ProductService } from '../../Services/product.service';
 
 @Component({
   selector: 'page-product',
@@ -10,13 +11,16 @@ import { PassProduct } from "../../Services/passProducts.service";
 })
 export class ProductPage {
 
+  product_id:number;
+
   title:string = "product";
   quantity:number = 2;
   price:number = 200;
   description = "description";
 
-  constructor(public passProductService:PassProduct,public http:Http ,private toastCtrl: ToastController,public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public passProductService:PassProduct,public http:Http ,private toastCtrl: ToastController,public productService:ProductService,public navCtrl: NavController, public navParams: NavParams) {
+    this.product_id=navParams.get("param");
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductPage');
@@ -24,6 +28,10 @@ export class ProductPage {
 
   addToCart () {
     this.navCtrl.push(CartPage);
+  }
+
+  ListProduct() {
+      return this.productService.products;
   }
 
   presentToast() {

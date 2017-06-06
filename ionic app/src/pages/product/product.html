@@ -1,25 +1,24 @@
 <ion-header>
 
-   <header  myTitle="Product"></header>
+    <header myTitle="Product"></header>
 
 </ion-header>
 
 
 <ion-content padding>
 
-    <ion-card>
+    <ion-card *ngFor="let product of ListProduct()">
 
         <img src="../../assets/img/iphon7.jpg">
 
         <ion-card-content>
-            <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy. Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a
-                DeLorean?! Whoa. This is heavy.</p>
+            <p>{{product.descripation}}</p>
         </ion-card-content>
 
         <ion-row>
             <ion-col center text-center>
                 <ion-note>
-                    1000$
+                    {{product.price}}
                 </ion-note>
             </ion-col>
         </ion-row>
