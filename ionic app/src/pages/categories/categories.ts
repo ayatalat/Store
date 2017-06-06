@@ -11,21 +11,26 @@ import { CatService } from "../../Services/catagory.service";
 })
 export class CategoriesPage {
 
-  cat_id:any;
+  catid:any;
 
-  constructor(private catservice: CatService, private http: Http,private navCtrl: NavController, private navParams: NavParams) {
-  }
+  constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
+   // console.log(navParams);
+    console.log(this.catid);
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CategoriesPage');
   }
 
-  // showSubCategories() {
-  //   this.navCtrl.push(SubCategoryPage);
-  // }
+  showSubCategories() {
+    this.navCtrl.push(SubCategoryPage, {
+    param1:1
+  })
+  }
 
   ListCategory() {
         return this.catservice.categories;
   }
+
 
 }
