@@ -18,6 +18,8 @@ export class RegisterPage {
   state:string;
   password:string;
 
+  msg:string;
+
   constructor(public userService:UserService ,public navCtrl: NavController, public navParams: NavParams) {
     console.log(this.userName);
   }
@@ -26,9 +28,18 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
 
-  register(name,email,mobile,country,city,state,password) {
-    this.userService.addUser(name,email,mobile,country,city,state,password);
-    this.navCtrl.push(HomePage);
+  register(name,email,mobile,country,city,state,password,confirmPass) {
+    if(name.length>0 && email.length>0 && mobile.length>0 && country.length>0 && city.length>0 
+    && state.length>0 && password.length>0) {
+      if(password == confirmPass) {
+        this.userService.addUser(name,email,mobile,country,city,state,password);
+        this.navCtrl.push(HomePage);
+      } else {
+        this.msg = "password dosen't matches";
+      }
+    } else {
+      this.msg = "You must fill all fields";
+    }
   }
 
 }

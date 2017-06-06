@@ -14,66 +14,50 @@
 
 <ion-content padding>
 
-    <ion-grid>
+    <form>
+        <ion-item>
+            <!--<ion-label>name</ion-label>-->
+            <ion-input type="text" placeholder="username" class="inputText" #username></ion-input>
+        </ion-item>
 
-        <!--Row 1 -->
-        <ion-row>
-            <ion-col>
-                <input type="text" placeholder="username" class="inputText" #username>
-            </ion-col>
-        </ion-row>
+        <ion-item>
+            <!--<ion-label>email</ion-label>-->
+            <ion-input input type="email" placeholder="E-mail" class="inputText" #email></ion-input>
+        </ion-item>
 
-        <!--Row 2 -->
-        <ion-row>
-            <ion-col>
-                <input type="text" placeholder="E-mail" class="inputText" #email>
-            </ion-col>
-        </ion-row>
+        <ion-item>
+            <!--<ion-label>mobile</ion-label>-->
+            <ion-input type="text" placeholder="Mobile Number" class="inputText" #mobile></ion-input>
+        </ion-item>
 
-        <!--Row 3 -->
-        <ion-row>
-            <ion-col>
-                <input type="text" placeholder="Mobile Number" class="inputText" #mobile>
-            </ion-col>
-        </ion-row>
+        <ion-item>
+            <!--<ion-label>country</ion-label>-->
+            <ion-input type="text" placeholder="Country" class="inputText" #country></ion-input>
+        </ion-item>
 
-        <!--Row 4 -->
-        <ion-row>
-            <ion-col>
-                <label>Address</label>
-            </ion-col>
-            <ion-grid>
-                <ion-row>
-                    <ion-col>
-                        <input type="text" placeholder="Country" class="inputText" #country>
-                        <input type="text" placeholder="City" class="inputText" #city>
-                        <input type="text" placeholder="State" class="inputText" #state>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
-        </ion-row>
+        <ion-item>
+            <!--<ion-label>city</ion-label>-->
+            <ion-input type="text" placeholder="City" class="inputText" #city></ion-input>
+        </ion-item>
 
-        <!-- Row 5 -->
-        <ion-row>
-            <ion-col>
-                <input type="password" placeholder="password" class="inputText" #password>
-            </ion-col>
-        </ion-row>
+        <ion-item>
+            <!--<ion-label>state</ion-label>-->
+            <ion-input type="text" placeholder="State" class="inputText" #state></ion-input>
+        </ion-item>
 
-        <!-- Row 6-->
-        <ion-row>
-            <ion-col>
-                <input type="password" placeholder="confirm password" class="inputText">
-            </ion-col>
-        </ion-row>
+        <ion-item>
+            <!--<ion-label>password</ion-label>-->
+            <ion-input type="password" placeholder="password" class="inputText" #password></ion-input>
+        </ion-item>
 
-        <!-- Row 7-->
-        <ion-row>
-            <ion-col>
-                <button (click)="register(username.value,email.value,mobile.value,country.value,city.value,state.value,password.value)" ion-button full icon-left><ion-icon name="login"></ion-icon>Register</button>
-            </ion-col>
-        </ion-row>
-
-    </ion-grid>
+        <ion-item>
+            <!--<ion-label>confirm password</ion-label>-->
+            <ion-input type="password" placeholder="confirm password" class="inputText" #confirmPass></ion-input>
+        </ion-item>
+        <button (click)="register(username.value,email.value,mobile.value,country.value,city.value,state.value,password.value,confirmPass.value)" ion-button full icon-left><ion-icon name="login"></ion-icon>Register</button>
+        <ion-item>
+            <label id="msgLbl">{{msg}}</label>
+        </ion-item>
+    </form>
 
 </ion-content>
