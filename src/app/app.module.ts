@@ -1,10 +1,10 @@
+import { LoginService } from './services/login.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
  import {RouterModule} from '@angular/router';
  	
-import { AppComponent } from './app.component';
 import { CatService } from "app/services/catagory.service";
 
 import { CatComponent } from "app/category/category.component";
@@ -20,9 +20,10 @@ import { editProduct } from 'app/product/editproduct.component';
 import { OrderComponent } from "app/order/order.component";
 import { OrderService } from "app/services/order.service";
 
+import { AuthComponent } from "./app.component";
+
 @NgModule({
   declarations: [
-    AppComponent,
     CatComponent,
     AddCatagory,
     EditCatagory,
@@ -31,7 +32,8 @@ import { OrderService } from "app/services/order.service";
       OrderComponent ,
      Product,
     AddProduct,
-    editProduct
+    editProduct,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +47,11 @@ import { OrderService } from "app/services/order.service";
       {path:"products/list" ,component:Product},
       {path:"products/add" ,component:AddProduct},
       {path:"products/edit/:id" ,component:editProduct},
-      {path: "order/list", component:OrderComponent}
+      {path: "order/list", component:OrderComponent},
+      { path: "login", component: AuthComponent }
     ])
   ],
-  providers: [CatService,SubCatService,ProductService,OrderService],
-  bootstrap: [AppComponent]
+  providers: [CatService,SubCatService,ProductService,OrderService,LoginService],
+  bootstrap: [AuthComponent]
 })
 export class AppModule { }

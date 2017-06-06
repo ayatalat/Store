@@ -1,4 +1,19 @@
 {
+  "users":
+  [
+    {
+    "email":"hind.m.hesham@gmail.com",
+    "password":"123456",
+    "status":-1,
+    "id":1
+    },
+    {
+    "email":"aya@gmail.com",
+    "password":"213",
+    "status":1,
+    "id":2
+    }
+  ],
   "products": [
     {
       "name": "hind",
