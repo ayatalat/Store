@@ -12,20 +12,21 @@ import { CatService } from "../../Services/catagory.service";
 export class SubCategoryPage {
 
   cat_id:number;
+  cat_name:string;
 
   constructor(private catservice: CatService, private http: Http,public navCtrl: NavController, public navParams: NavParams) {
-    this.cat_id=navParams.get("param");
-    console.log(this.cat_id)
-  
+    this.cat_id=navParams.get("categoryId");
+    this.cat_name = navParams.get("categotyName");
 }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SubCategoryPage');
   }
 
-  showProductsList($event,catagoryId) {
+  showProductsList($event,catagoryId,catagoryName) {
     this.navCtrl.push(ProductsListPage,{
-      "param":catagoryId
+      "categoryId":catagoryId,
+      "categoryName":catagoryName
     })
     console.log(catagoryId);
   }

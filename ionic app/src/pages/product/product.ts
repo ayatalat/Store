@@ -12,6 +12,7 @@ import { ProductService } from '../../Services/product.service';
 export class ProductPage {
 
   product_id:number;
+  product_name:number;
 
   title:string = "product";
   quantity:number = 2;
@@ -19,7 +20,8 @@ export class ProductPage {
   description = "description";
 
   constructor(public passProductService:PassProduct,public http:Http ,private toastCtrl: ToastController,public productService:ProductService,public navCtrl: NavController, public navParams: NavParams) {
-    this.product_id=navParams.get("param");
+    this.product_id=navParams.get("productId");
+    this.product_name=navParams.get("productName");
 }
 
   ionViewDidLoad() {

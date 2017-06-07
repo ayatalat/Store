@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { OrderService } from "../../Services/order.service";
 
 @Component({
   selector: 'page-checkout',
@@ -15,6 +14,6 @@ export class CheckoutPage {
     console.log('ionViewDidLoad CheckoutPage');
   }
 confirm(){
-  // this.orderservice.addorder();
+  
 }
 }

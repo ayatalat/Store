@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyApp } from './app.component';
 import { RouterModule } from "@angular/router";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { HttpModule } from '@angular/http';
 import { CatService } from "../Services/catagory.service";
@@ -56,6 +57,7 @@ import { HeaderComponent } from '../components/header/header';
     BrowserModule,
     [HttpModule],
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
     RouterModule.forRoot([
       {path:"subcatagory/:id",component:SubCategoryPage}
     ])

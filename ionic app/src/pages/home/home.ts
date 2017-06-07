@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController , NavParams } from 'ionic-angular';
 import { BarcodeScanner,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 import { ProfilePage } from '../profile/profile';
 import { CategoriesPage } from '../categories/categories';
 import { CartPage } from "../cart/cart";
 import { OrderHistoryPage } from "../order-history/order-history";
 import { ProductPage } from "../product/product";
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -14,11 +15,15 @@ import { ProductPage } from "../product/product";
 })
 export class HomePage {
 
+  user_email:string;
   options: BarcodeScannerOptions;
   result: {};
 
-  constructor(private barCode:BarcodeScanner,public navCtrl: NavController) {
-
+  constructor(private storage: Storage,private barCode:BarcodeScanner,public navCtrl: NavController,public navParams:NavParams) {
+    this.user_email=navParams.get("user_email");
+    storage.get('email').then((val) => {
+    console.log(val);
+  });
   }
 
   async scanBarCode() {
@@ -40,10 +45,6 @@ export class HomePage {
   showProfile() {
     this.navCtrl.push(ProfilePage);
   }
-
-  // scanBarCode() {
-  //   this.navCtrl.push(ScanBarCodePage);
-  // }
 
   showHistory() {
     this.navCtrl.push(OrderHistoryPage);

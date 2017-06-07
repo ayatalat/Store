@@ -21,9 +21,10 @@ export class CategoriesPage {
     console.log('ionViewDidLoad CategoriesPage');
   }
 
-  showSubCategories($event,catagoryId) {
+  showSubCategories($event,catagoryId,categotyName) {
     this.navCtrl.push(SubCategoryPage,{
-      "param":catagoryId
+      "categoryId":catagoryId,
+      "categotyName":categotyName
     })
     console.log(catagoryId);
     

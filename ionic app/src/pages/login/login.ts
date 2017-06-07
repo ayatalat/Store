@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
@@ -13,7 +14,7 @@ export class LoginPage {
 
   msg:string="";
 
-  constructor(public userService:UserService,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private storage: Storage,public userService:UserService,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -23,7 +24,10 @@ export class LoginPage {
   loginToHome(email,password) {
     for (var i = 0; i < this.userService.users.length ; i++) {
       if(this.userService.users[i].email == email && this.userService.users[i].password == password) {
-        this.navCtrl.push(HomePage);
+        this.navCtrl.push(HomePage,{
+          "user_email":email
+        });
+        this.storage.set('email', email);
       }
       else {
         this.msg="Incorrect data";

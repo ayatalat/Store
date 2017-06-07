@@ -12,6 +12,8 @@ export class CartPage {
 
   productsArrLength:number = this.passProductService.products.length;
 
+  public id:number;
+
   constructor(public passProductService:PassProduct,public http:Http ,public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -25,6 +27,10 @@ export class CartPage {
 
   Listproducts() {
     return this.passProductService.products;
+  }
+
+  deleteProduct(id:number) {
+    this.passProductService.deleteProduct(id);
   }
 
 
