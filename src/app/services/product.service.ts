@@ -20,6 +20,9 @@ export class ProductService {
             err => console.log(`error happened getting products ${err}`)
             );
     };
+    get Products() {
+        return this.products;
+    }
 
     // addProduct(productname,productbarcode,productprice,productquantity,productimage,productdescription:any)
     addProduct(productname, productbarcode, productprice, productquantity, productdescription, catid: any) {

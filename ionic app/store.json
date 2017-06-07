@@ -109,38 +109,29 @@
     "cart": [{
         "count": 0
     }],
-    "passproduct": [
-
-    ],
+    "passproduct": [{
+        "title": "product",
+        "quantity": 2,
+        "price": 200,
+        "description": "description",
+        "id": 1
+    }],
     "user": [{
-            "userName": "shimaa",
-            "email": "shimaa",
-            "mobile": "shimaa",
-            "country": "shimaa",
-            "city": "shimaa",
-            "state": "shimaa",
-            "password": "shimaa",
-            "id": 1
-        },
-        {
-            "userName": "reham",
-            "email": "reham",
-            "mobile": "reham",
-            "country": "reham",
-            "city": "reham",
-            "state": "reham",
-            "password": "reham",
-            "id": 2
-        },
-        {
-            "userName": "ff",
-            "email": "ff",
-            "mobile": "ff",
-            "country": "ff",
-            "city": "ff",
-            "state": "ff",
-            "password": "ff",
-            "id": 3
-        }
-    ]
+        "userName": "shimaa",
+        "email": "shimaa",
+        "mobile": ["0100000000", "011111111"],
+        "address": [{
+                "country": "shimaa",
+                "city": "shimaa",
+                "state": "shimaa"
+            },
+            {
+                "country": "shimaa",
+                "city": "shimaa",
+                "state": "shimaa"
+            }
+        ],
+        "password": "shimaa",
+        "id": 1
+    }]
 }

@@ -29768,6 +29768,10 @@ header #header {
   padding: -100px;
 }
 
+header .ion-icon {
+  background-color: transparent;
+}
+
 page-cart #inputNum {
   width: 80%;
   height: 1005;
@@ -29811,6 +29815,16 @@ page-cart #notifications-badge {
   top: -3px;
   left: -3px;
   border-radius: 100%;
+}
+
+page-cart #emptyDiv {
+  text-align: center;
+  vertical-align: middle;
+}
+
+page-cart .span {
+  text-align: center;
+  text-shadow: 20ch;
 }
 
 page-categories #catName {
@@ -29877,6 +29891,10 @@ page-login .inputText {
   width: 100%;
 }
 
+page-login #msgLbl {
+  color: red;
+}
+
 page-order-details #inputNum {
   width: 80%;
   height: 1005;
@@ -29930,6 +29948,10 @@ page-profile .card-background-page .card-title {
 
 page-register .inputText {
   width: 100%;
+}
+
+page-register #msgLbl {
+  color: red;
 }
 
 page-sub-category #catName {
