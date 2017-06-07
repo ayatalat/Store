@@ -23,6 +23,26 @@ export class OrderService {
         return this.orders;
     }
 
-  
+
+
+    addorder() {
+        var now = new Date();
+        var jsonDate = now.toJSON();
+        let neworder = {
+            "date_added":jsonDate,
+            "iduser": 1,
+            "status": 1,
+            "date_delivered": "2017-05-15 19:43:37 +0100"
+        }
+        this.http.post(this.orderUrl, neworder).map((response: Response) => response.json())
+            .subscribe(
+            data => {
+                this.orders.push(data);
+            },
+            (err) => console.log(`errror ${err}`)
+            )
+    }
+
+
 
 }
