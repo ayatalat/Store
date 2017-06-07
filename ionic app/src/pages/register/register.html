@@ -29,7 +29,9 @@
             <!--<ion-label>mobile</ion-label>-->
             <ion-input type="text" placeholder="Mobile Number" class="inputText" #mobile></ion-input>
         </ion-item>
-
+        <ion-item>
+             <button (click)="get_location($event)" ion-button full color="danger">Get location</button>
+        </ion-item>
         <ion-item>
             <!--<ion-label>country</ion-label>-->
             <ion-input type="text" placeholder="Country" class="inputText" #country></ion-input>

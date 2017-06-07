@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { RouterModule } from "@angular/router";
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { IonicStorageModule } from '@ionic/storage';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { HttpModule } from '@angular/http';
 import { CatService } from "../Services/catagory.service";
@@ -86,6 +87,7 @@ import { HeaderComponent } from '../components/header/header';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BarcodeScanner,
     CatService,
+    Geolocation,
     OrderService,
     ProductService,
     SubCatService,
