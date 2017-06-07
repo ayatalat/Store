@@ -10,7 +10,6 @@ import { PassProduct } from "../../Services/passProducts.service";
 })
 export class HeaderComponent {
 
-  // productsArrLength:number = this.passProductService.products.length;
   productsArrLength:number;
 
   @Input('myTitle') myTitle;

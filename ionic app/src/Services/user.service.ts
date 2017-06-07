@@ -25,9 +25,15 @@ export class UserService {
             err => console.log(`error happened getting todos ${err}`)
             );
   }
-  get categories() {
-        return this.users;
-    }
+  
+  getUserBuEmail(email:string) {
+        return this.http.get(this.userUrl+"/"+email).map((response: Response) => response.json())
+            .subscribe(data => {
+                this.users = data
+            },
+            err => console.log(`error happened getting todos ${err}`)
+            );
+  }
 
     addUser(userName: string,email:string,mobile:number, country: string,city:string,state:string,password:string) {
         if (userName != "" && email != "" && country != "" && city != "" && state != "" && password != "" && mobile !=NaN) {

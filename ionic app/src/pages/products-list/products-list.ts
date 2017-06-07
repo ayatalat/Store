@@ -11,18 +11,21 @@ import { ProductService } from '../../Services/product.service';
 export class ProductsListPage {
 
   cat_id:number;
+  cat_name:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public productService:ProductService) {
-    this.cat_id=navParams.get("param");
+    this.cat_id=navParams.get("categoryId");
+    this.cat_name = navParams.get("categoryName");
 }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProductsListPage');
   }
 
-  showProduct($event,productId) {
+  showProduct($event,productId,productName) {
     this.navCtrl.push(ProductPage,{
-      "param":productId
+      "productId":productId,
+      "productName":productName
     })
   }
 

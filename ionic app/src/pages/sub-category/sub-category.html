@@ -1,6 +1,6 @@
 <ion-header>
 
-    <header myTitle="sub-category"></header>
+    <header myTitle={{cat_name}}></header>
 
 </ion-header>
 
@@ -10,9 +10,9 @@
         <ion-row>
             <ion-col col-6 *ngFor="let catagory of ListCategory()">
                 <ion-card *ngIf="catagory.id_subcat == cat_id">
-                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList($event,catagory.id)" />
+                    <img src="../../assets/img/card-sf.jpg" (click)="showProductsList($event,catagory.id,catagory.name)" />
                     <ion-card-content>
-                        <ion-card-title text-center (click)="showProductsList($event,catagory.id)">
+                        <ion-card-title text-center (click)="showProductsList($event,catagory.id,catagory.name)">
                             <a href="#" id="catName">{{catagory.name}}</a>
                         </ion-card-title>
                         <p>

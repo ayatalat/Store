@@ -49,5 +49,15 @@ export class PassProduct {
         }
     }
 
+    deleteProduct(id:number){
+        this.http.delete(this.productUrl+"/"+id).map((response:Response)=>response.json())
+        .subscribe(
+            data =>{
+                this.products=data
+            },
+            (err)=> console.log(`error ${err}`)
+        )
+    }
+
 
 }

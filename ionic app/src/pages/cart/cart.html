@@ -7,6 +7,7 @@
 
     <div class="row header" *ngIf="productsArrLength > 0">
         <div class="col">product name</div>
+        <div class="col">barcode</div>
         <div class="col">quantity</div>
         <div class="col">price</div>
         <div class="col"></div>
@@ -14,9 +15,10 @@
 
     <div class="row" *ngFor="let product of Listproducts()">
         <div class="col">{{product.title}}</div>
+        <div class="col">{{product.barcode}}</div>
         <div class="col"><input type="number" value={{product.quantity}} id="inputNum"></div>
         <div class="col">{{product.price}}$</div>
-        <div class="col"><button class="button" style="background-color:white"><ion-icon name="md-trash"></ion-icon></button></div>
+        <div class="col"><button class="button" style="background-color:white" (click)="deleteProduct(product.id)"><ion-icon name="md-trash"></ion-icon></button></div>
     </div>
     <br/>
     <div *ngIf="productsArrLength > 0">
