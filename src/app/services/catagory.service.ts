@@ -7,7 +7,7 @@ export class CatService {
     public catagories: any = [];
     name:string;
     description:string;
-    catUrl = " http://localhost:3500/category";
+    catUrl = " http://localhost:3000/category";
     constructor(private http: Http) {
         this.getAllCat();
     }
@@ -17,7 +17,7 @@ export class CatService {
             .subscribe(data => {
                 this.catagories = data
             },
-            err => console.log(`error happened getting todos ${err}`)
+            err => console.log(`error happened getting categories ${err}`)
             );
     }
     get categories() {
@@ -50,7 +50,7 @@ export class CatService {
                 "id_supcat":null,
                 "description":desc,
                 "status": 1,
-                
+
             }
             console.log(newcatagory);
             this.http.put(this.catUrl+"/"+id, newcatagory).map((response: Response) => response.json())

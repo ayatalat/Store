@@ -1,10 +1,10 @@
 <app-Admin></app-Admin>
 <!-- end header -->
 
-<!-- content section -->        
+<!-- content section -->
 <section id="main-content">
     <section class="wrapper">
-        <div id="content-head"> 
+        <div id="content-head">
          <h2> Categories </h2>
         </div>
         <div class="row">
@@ -19,7 +19,7 @@
                     <td>{{catagory.description}}</td>
                     <td>
                         <a [routerLink]="['/catagory/edit',catagory.id]" class="btn btn-primary">Edit</a>
-                        <a *ngIf="catagory.id_subcat != null" [routerLink]="['/subcatagory/add',catagory.id]" class="btn btn-success"> add subCatagory</a>
+                        <a *ngIf="catagory.id_subcat == null" [routerLink]="['/subcatagory/add',catagory.id]" class="btn btn-success"> add subCatagory</a>
                         <a [routerLink]="['/catagory/delete',catagory.id]" class="btn btn-danger" >remove</a>
                     </td>
                 </tr>
