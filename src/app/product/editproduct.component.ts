@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'app/services/product.service';
+import { ProductService } from '../services/product.service';
 import {Router, ActivatedRoute, Params} from '@angular/router';
+import { LoginService } from '../services/login.service';
+
 @Component({
   selector: 'app-editproduct',
   templateUrl: '../product/editproduct.component.html',
@@ -15,10 +17,11 @@ export class editProduct implements OnInit {
     productDescription = "";
     id :any="";
     product:any;
-    constructor(private productService: ProductService, private router:Router, private activatedRoute: ActivatedRoute) { 
+    constructor(private productService: ProductService,private loginService: LoginService, private router:Router, private activatedRoute: ActivatedRoute) { 
   }
   ngOnInit() {
     // subscribe to router event
+    this.loginService.checkCredentials();
     this.activatedRoute.params.subscribe((params: Params) => {
         this.id = +params['id'];
         console.log(this.id);
@@ -27,7 +30,6 @@ export class editProduct implements OnInit {
   }
   getProductById()
   {
-      console.log("from method",this.id);
       return this.productService.products.filter((product:any)=>product.id===this.id);
       
 

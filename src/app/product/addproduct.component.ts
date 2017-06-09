@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'app/services/product.service';
+import { ProductService } from '../services/product.service';
 import { CatService } from '../services/catagory.service';
+import { LoginService } from '../services/login.service';
 
 import { Router } from '@angular/router';
 @Component({
@@ -17,9 +18,12 @@ export class AddProduct {
   productDescription = "";
   selectedoption = "";
   Category:any;
-  constructor(private catservice: CatService, private productService: ProductService, private router: Router) {
+  constructor(private catservice: CatService, private loginService: LoginService, private productService: ProductService, private router: Router) {
 
   }
+  ngOnInit(){
+        this.loginService.checkCredentials();
+    }
   onChange(newValue) {
     console.log(newValue);
     this.selectedoption = newValue;

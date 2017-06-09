@@ -3,6 +3,7 @@ import { CatService } from '../services/catagory.service';
 import { Http, Response, Request } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import {Router} from '@angular/router';
+import { LoginService } from '../services/login.service';
 
 
 
@@ -16,9 +17,10 @@ export class EditCatagory {
     id: number;
     public catagory: any[];
 
-    constructor(private catservice: CatService, private http: Http, private router: ActivatedRoute,private route:Router) {
+    constructor(private catservice: CatService, private loginService: LoginService, private http: Http, private router: ActivatedRoute,private route:Router) {
     }
     ngOnInit() {
+        this.loginService.checkCredentials();
         this.sub = this.router.params.subscribe(params => {
             this.id = +params['id'];
             console.log(this.id);

@@ -5,40 +5,43 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
  import {RouterModule} from '@angular/router';
  	
-import { CatService } from "app/services/catagory.service";
-
-import { CatComponent } from "app/category/category.component";
-import { AddCatagory } from "app/category/addcatagory.component";
-import { EditCatagory } from "app/category/editcatagory.component";
-import { SubCatService } from "app/services/subcatagory.service";
-import { ProductService } from 'app/services/product.service';
-import { SubCatagory } from "app/category/subcatagory.component";
-import { deleteComponent } from "app/category/deletecatagory.component";
-import { Product } from 'app/product/product.component';
-import { AddProduct } from 'app/product/addproduct.component';
-import { editProduct } from 'app/product/editproduct.component';
-import { OrderComponent } from "app/order/order.component";
-import { OrderService } from "app/services/order.service";
-
-import { AuthComponent } from "./app.component";
+import { AppComponent } from "./app.component";  
+import { CatService } from "./services/catagory.service";
+import { CatComponent } from "./category/category.component";
+import { AddCatagory } from "./category/addcatagory.component";
+import { EditCatagory } from "./category/editcatagory.component";
+import { SubCatService } from "./services/subcatagory.service";
+import { ProductService } from './services/product.service';
+import { SubCatagory } from "./category/subcatagory.component";
+import { deleteComponent } from "./category/deletecatagory.component";
+import { Product } from './product/product.component';
+import { AddProduct } from './product/addproduct.component';
+import { editProduct } from './product/editproduct.component';
+import { OrderComponent } from "./order/order.component";
+import { OrderService } from "./services/order.service";
+import { AdminComponent } from "./admin Component/admin.component";
+import { AuthComponent } from "./login/login.component";
 
 @NgModule({
   declarations: [
+    AppComponent,
     CatComponent,
     AddCatagory,
     EditCatagory,
-     SubCatagory,
-     deleteComponent,
-      OrderComponent ,
-     Product,
+    SubCatagory,
+    deleteComponent,
+    OrderComponent ,
+    Product,
     AddProduct,
     editProduct,
-    AuthComponent
+    AuthComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,RouterModule.forRoot([
+      {path:"home" ,component:Product},
       {path:"catagory/list" ,component:CatComponent},
       {path:"catagory/add",component:AddCatagory},
       {path:"catagory/edit/:id",component:EditCatagory},
@@ -48,10 +51,12 @@ import { AuthComponent } from "./app.component";
       {path:"products/add" ,component:AddProduct},
       {path:"products/edit/:id" ,component:editProduct},
       {path: "order/list", component:OrderComponent},
-      { path: "login", component: AuthComponent }
+      {path: "login", component: AuthComponent },
+      {path: '', component: AdminComponent },
+      {path: '**', component: AdminComponent }
     ])
   ],
   providers: [CatService,SubCatService,ProductService,OrderService,LoginService],
-  bootstrap: [AuthComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

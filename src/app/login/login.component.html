@@ -1,0 +1,32 @@
+<!--<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div class="form-login">
+                <h4> Welcome admin</h4>
+            <br />
+            <input type="text" id="email" class="form-control input-sm chat-input" name="email" [(ngModel)]="email" placeholder="email" ><br />
+            <input type="password" id="userPassword" class="form-control input-sm chat-input" name="password" [(ngModel)]="password" placeholder="password" />
+            <div class="wrapper">
+            <span class="group-btn">   
+                <button class="btn btn-primary btn-md" type="submit" (click)="adminCheck()">Log In<i class="fa fa-sign-in"></i></button>  
+            </span>
+            </div>
+            </div>
+        
+        </div>
+    </div>
+</div>-->  
+
+  <div class="wrap">
+		<div class="avatar">
+      <img src="../../assets/img/1.png">
+      
+		</div>
+		<input type="text" id="email" class="form-control input-sm chat-input" name="email" [(ngModel)]="email" placeholder="email" required>
+		<div class="bar">
+			<i></i>
+		</div>
+		<input type="password" id="userPassword" class="form-control input-sm chat-input" name="password" [(ngModel)]="password" placeholder="password" />
+		<!--<a href="" class="forgot_link">forgot ?</a>-->
+		<button (click)="adminCheck()">Sign in</button>
+	</div>

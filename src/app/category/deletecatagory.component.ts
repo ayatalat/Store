@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { Http, Response, Request } from '@angular/http';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { CatService } from '../services/catagory.service';
-import { ProductService } from 'app/services/product.service';
+import { ProductService } from '../services/product.service';
+import { LoginService } from '../services/login.service';
 
 
 @Component({
@@ -17,10 +18,11 @@ export class deleteComponent {
     id: number;
     products:any;
     newCategory:any;
-    constructor(private http: Http, private productservice: ProductService, private route: ActivatedRoute, private catservice: CatService, private router: Router) {
+    constructor(private http: Http, private loginService: LoginService, private productservice: ProductService, private route: ActivatedRoute, private catservice: CatService, private router: Router) {
 
     }
     ngOnInit() {
+        this.loginService.checkCredentials();
         this.sub = this.route.params.subscribe(params => {
             this.id = +params['id'];
             console.log(this.id);

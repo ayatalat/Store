@@ -1,4 +1,8 @@
-<div class="row" *ngFor="let product of getProductById()" >
+<app-Admin></app-Admin>
+
+ <!-- content section -->
+<section id="main-content">
+<!--<div class="row" *ngFor="let product of getProductById()" >
   <div class="form-group col-md-5 col-md-offset-4" >
     <label for="exampleInputEmail1">product name</label>
     <input type="text" name="productnameEdit" class="form-control" [(ngModel)]="product.name" #productnameEdit="ngModel"/>
@@ -26,4 +30,32 @@
 <div class="form-group col-md-5 col-md-offset-4">
     <button type="button" class="btn btn-primary" (click)="editProduct(product.id,product.status)">edit product</button>
 </div>
-</div>
+</div>-->
+
+
+<section class="wrapper">
+        <div class="row">
+            <table class="table table-bordered">
+                <tr id="main-tr">
+                    <td> name </td>
+                    <td> barcode </td>
+                    <td> price </td>
+                    <td>Quantity </td>
+                    <td> image </td>
+                    <td> description </td>
+                </tr>
+                <tr *ngFor="let product of getProductById()">
+                    <td><input type="text" name="productnameEdit" class="form-control" [(ngModel)]="product.name" #productnameEdit="ngModel"/></td>
+                    <td><input type="text" name="productbarcode" class="form-control" [(ngModel)]="product.barcode" #productbarcode="ngModel"/></td>
+                    <td><input type="text" name="productprice" class="form-control" [(ngModel)]="product.price" #productprice="ngModel"/></td>
+                    <td><input type="text" name="productquantity" class="form-control" [(ngModel)]="product.quantity" #productquantity="ngModel"/></td>
+                    <td><input type="file" name ="productimage" class="form-control-file" id="exampleInputFile"  [(ngModel)]="product.image" #productimage="ngModel"></td>
+                    <td><textarea name="productdescription" class="form-control" id="exampleTextarea" rows="4" cols="30" [(ngModel)]="product.description" #productdescripation="ngModel"></textarea></td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group col-md-4 col-md-offset-4">
+            <button type="button" class="btn btn-primary" (click)="editProduct(product.id,product.status)">edit product</button>
+        </div>
+    </section>
+</section>

@@ -15,12 +15,12 @@ export class ProductService {
         return this.http.get(this.storeUrl).map((response: Response) => response.json())
             .subscribe(data => {
                 this.products = data
-                console.log(`the data ${data}`);
+                console.log(this.products);
             },
             err => console.log(`error happened getting products ${err}`)
             );
     };
-    get Products() {
+    get AllProducts() {
         return this.products;
     }
 
@@ -34,7 +34,7 @@ export class ProductService {
                 "barcode": productbarcode,
                 "price": productprice,
                 "quantity": productquantity,
-                "descripation": productdescription,
+                "description": productdescription,
                 "image": "image",
                 "cat_id": catid,
                 "status": 1
@@ -65,7 +65,7 @@ export class ProductService {
                 "barcode": productBarcodeEdit,
                 "price": productPriceEdit,
                 "Quantity": productQuantityEdit,
-                "descripation": productDescriptionEdit,
+                "description": productDescriptionEdit,
                 "image": productImageEdit,
                 "status": status,
                 "cat_id":2

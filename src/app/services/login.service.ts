@@ -11,7 +11,7 @@ export class LoginService {
     public adminUser: any;
     public adminId = 1;
     loginUrl = " http://localhost:3500/users";
-    constructor(private http: Http) {
+    constructor(private http: Http, private router: Router) {
 
     }
 
@@ -27,12 +27,27 @@ export class LoginService {
             );
     };
     
-
-    
-    Authentcate()
-    {
-
+  logout() {
+    localStorage.removeItem("user");
+    this.router.navigate(['/login']);
+  }
+ 
+  login(email,password){
+      console.log("email from form ",email);
+      console.log("email from database ",this.adminUser.email);
+    if (this.adminUser.email == email && this.adminUser.password == password){
+      localStorage.setItem("user", this.adminUser);
+     // console.log(localStorage.setItem("user",this.adminUser));
+      this.router.navigate(['/home']);   
+      return true;
     }
-    
+    return false;
+ 
+  }
+ 
+   checkCredentials(){
+    if (localStorage.getItem("user") === null){
+        this.router.navigate(['/login']);
     }
-    
+  } 
+}
