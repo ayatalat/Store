@@ -2,8 +2,8 @@
   "users":
   [
     {
-    "email":"hind.m.hesham@gmail.com",
-    "password":"123456",
+    "email":"hind@gmail.com",
+    "password":"123",
     "status":-1,
     "id":1
     },
@@ -16,15 +16,26 @@
   ],
   "products": [
     {
-      "name": "hind",
+      "name": "Sony Z2",
       "barcode": "123456789123",
-      "price": "200",
+      "price": "4500",
       "quantity": "3",
-      "descripation": "product 1",
+      "description": "product 1",
       "image": "",
       "status": 1,
       "cat_id": 1,
       "id": 1
+    },
+    {
+      "name": "Iphone7",
+      "barcode": "123456789123",
+      "price": "1500",
+      "quantity": "3",
+      "description": "product 2",
+      "image": "",
+      "status": 1,
+      "cat_id": 1,
+      "id": 2
     }
   ],
   "category": [
