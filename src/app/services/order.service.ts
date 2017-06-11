@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class OrderService {
     public orders: any = [];
    
-    orderUrl = " http://localhost:3500/orders";
+    orderUrl = " http://localhost:3000/orders";
     constructor(private http: Http) {
         this.getAllOrders();
     }

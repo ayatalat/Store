@@ -5,17 +5,21 @@
 <section id="main-content">
     <section class="wrapper">
         <div id="content-head"> 
-         <h2> orders </h2>
+         <h2> Orders </h2>
         </div>
         <div class="row">
             <table class="table table-bordered">
                 <tr id="main-tr">
-                    <td>Date Added</td>
-                    <td>Date Delivered</td>
+                    <td>Order ID</td>
+                    <td>Addition Date</td>
+                    <td>Requested Delivery Date</td>
+                    <td>Delivery Date</td>
                 </tr>
                 <tr *ngFor="let order of listOrders()">
-                    <td>{{order.date_added}}</td>
-                    <td>{{order.date_delivered}}</td>
+                    <td>{{order.idorder}}</td>
+                    <td>{{order.ordertime | date:'short' }}</td>
+                    <td>{{order.selectedtime | date:'short' }}</td>
+                    <td>{{order.deliverytime | date:'short' }}</td>
                 </tr>
             </table>
         </div>
